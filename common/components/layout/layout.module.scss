@@ -1,0 +1,35 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.sharedSideText {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background-color: $blue;
+    width: 242px;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    border-radius: 19px 0 0 19px;
+    text-align: center;
+    display: none;
+    z-index: 10;
+}
+
+.previewButton {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $purple;
+    padding: 1rem 2rem;
+    z-index: 100;
+    color: $white;
+    &:hover {
+        color: $white;
+        background-color: darken($purple, 10%);
+    }
+}
+
+@include breakpoint(medium) {
+    .sharedSideText {
+        display: block;
+    }
+}

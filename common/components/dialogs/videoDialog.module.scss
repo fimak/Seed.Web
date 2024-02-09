@@ -1,0 +1,32 @@
+@import '@styles/variables.scss';
+.videoDialog {
+    .closeContainer {
+        margin-bottom: 1.75rem;
+        text-align: right;
+    }
+
+    .clearBackground {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .closeButton {
+        background-color: $greyLight;
+        color: $black;
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        font-size: 1rem;
+        &:hover {
+            background-color: $red;
+        }
+    }
+    .wrapper {
+        width: 1380px;
+        max-width: 100%;
+    }
+    
+}

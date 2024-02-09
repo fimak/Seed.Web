@@ -1,0 +1,36 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+.widgetTabs {
+    &.variantStandard {
+        .tabsContainer {
+            text-align: center;
+        }
+        .tabs {
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            flex-wrap: wrap;
+            border-radius: 11px;
+            background-color: $white;
+    
+            justify-content: center;
+            list-style: none;
+            a {
+                color: $greyDark;
+                font-size: 1.5rem;
+                font-weight: 700;
+                display: block;
+                min-width: 237px;
+                padding: 1rem;
+                border-radius: 11px;
+                background-color: transparent;
+                &:hover, &:focus {
+                    background-color: rgba($green, .5);
+                }
+                &.active {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}

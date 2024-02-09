@@ -1,0 +1,31 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.videoTile {
+    display: block;
+
+    .text {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        i{
+            font-size: 1.75rem;
+            margin-right: .75rem;
+        }
+    }
+
+    h6 {
+        color: $black;
+    }
+
+    img {
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    @include breakpoint(medium) {
+        .text {
+            margin-top: 2.5rem;
+        }
+    }
+}

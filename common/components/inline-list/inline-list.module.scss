@@ -1,0 +1,76 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+@mixin inlineListStyles() {
+    display: inline-flex;
+    list-style: none;
+    padding-left: 0;
+    flex-wrap: wrap;
+
+    &.size1 {
+        $size: rem-calc(map-get($inlineListGutters, 1) / 2);
+        margin: 0 -#{$size} -1rem;
+        > li {
+            margin: 0 #{$size} 1rem;
+        }
+    }
+
+    &.size2 {
+        $size: rem-calc(map-get($inlineListGutters, 2) / 2);
+        margin: 0 -#{$size} -1rem;
+        > li {
+            margin: 0 #{$size} 1rem;
+        }
+    }
+
+    &.size3 {
+        $size: rem-calc(map-get($inlineListGutters, 3) / 2);
+        margin: 0 -#{$size} -1rem;
+        > li {
+            margin: 0 #{$size} 1rem;
+        }
+    }
+
+    .divider.default {
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 1.5em;
+            background-color: $linkColor;
+        }
+    }
+    &.dark {
+        .divider {
+            &::before {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.inlineList {
+    @include inlineListStyles();
+}
+
+@include breakpoint(medium) {
+    .mediumInlineList {
+        @include inlineListStyles();
+    }
+}
+
+@include breakpoint(large) {
+    .largeInlineList {
+        @include inlineListStyles();
+    }
+}
+@include breakpoint(xlarge) {
+    .xlargeInlineList {
+        @include inlineListStyles();
+    }
+}
+@include breakpoint(xxlarge) {
+    .xxlargeInlineList {
+        @include inlineListStyles();
+    }
+}

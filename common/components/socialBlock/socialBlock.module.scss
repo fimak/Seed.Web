@@ -1,0 +1,49 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.socialBlock {
+    background-color: $greyLight;
+
+    h5 {
+        color: $blue;
+        font-size: 1rem;
+    }
+
+    .email {
+        font-size: .75rem;
+    }
+
+    @include breakpoint(medium down) {
+        padding: .75rem 2rem .75rem 1.5rem;
+        display: inline-flex;
+        h5 {
+            margin: 0 2rem 0 0;
+        }
+        ul {
+            display: flex;
+            margin: 0 -1rem;
+            li {
+                margin: 0 .5rem;
+            }
+        }
+    }
+
+    @include breakpoint(large) {
+        padding: 1.5rem 0 .75rem;
+        width: 100px;
+        text-align: center;
+
+        ul {
+            width: 50px;
+            margin: 0 auto;
+        }
+
+        li {
+            padding: .75rem 0;
+            border-top: 1px solid $white;
+            &:first-child {
+                border-top-width: 0;
+            }
+        }
+    }
+}

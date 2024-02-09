@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Seed.Web</Name>
+    <RootNamespace>Seed.Web</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9f55d70e-d9b5-48aa-8b4b-db44ce0b056c</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".babelrc" />
+    <Content Include=".env" />
+    <Content Include=".env.local" />
+    <Content Include=".env.development" />
+    <Content Include=".eslintrc.json" />
+    <Content Include=".gitignore" />
+    <Content Include="common\components\dialogs\basicDialog.tsx" />
+    <Content Include="common\components\dialogs\videoDialog.module.scss" />
+    <Content Include="common\components\grid\controls\widgets\carousel\layouts\services.module.scss" />
+    <Content Include="common\components\grid\controls\widgets\columnLinks\columnLinks.module.scss" />
+    <Content Include="common\components\grid\controls\widgets\cta\cta.tsx" />
+    <Content Include="common\components\grid\controls\widgets\cta\layouts\fullWidthCta.module.scss" />
+    <Content Include="common\components\grid\controls\widgets\cta\layouts\fullWidthCta.tsx" />
+    <Content Include="common\components\grid\controls\widgets\cta\layouts\tileCta.module.scss" />
+    <Content Include="common\components\grid\controls\widgets\linkBar\linkBar.module.scss" />
+    <Content Include="common\components\grid\controls\widgets\textWithImages\textWithImages.module.scss" />
+    <Content Include="common\components\grid\grid.module.scss" />
+    <Content Include="common\components\header\hamburgerToggle.module.scss" />
+    <Content Include="common\components\inline-list\inline-list.module.scss" />
+    <Content Include="common\components\links\flexible-link.module.scss" />
+    <Content Include="common\components\links\circleLink.module.scss" />
+    <Content Include="common\components\links\imageLink.module.scss" />
+    <Content Include="common\components\links\vertical-link.module.scss" />
+    <Content Include="common\components\umbracoForm\umbracoForm.module.scss" />
+    <Content Include="common\components\zoomSlides\zoomSlides.module.scss" />
+    <Content Include="common\components\zoomSlides\zoomSlidesProvider.tsx" />
+    <Content Include="lib\greensock\all.js" />
+    <Content Include="lib\greensock\CSSPlugin.js" />
+    <Content Include="lib\greensock\CSSRulePlugin.js" />
+    <Content Include="lib\greensock\CustomEase.js" />
+    <Content Include="lib\greensock\Draggable.js" />
+    <Content Include="lib\greensock\EaselPlugin.js" />
+    <Content Include="lib\greensock\EasePack.js" />
+    <Content Include="lib\greensock\Flip.js" />
+    <Content Include="lib\greensock\gsap-core.js" />
+    <Content Include="lib\greensock\index.js" />
+    <Content Include="lib\greensock\MotionPathPlugin.js" />
+    <Content Include="lib\greensock\Observer.js" />
+    <Content Include="lib\greensock\PixiPlugin.js" />
+    <Content Include="lib\greensock\ScrollToPlugin.js" />
+    <Content Include="lib\greensock\ScrollTrigger.js" />
+    <Content Include="lib\greensock\TextPlugin.js" />
+    <Content Include="lib\greensock\utils\matrix.js" />
+    <Content Include="lib\greensock\utils\paths.js" />
+    <Content Include="lib\greensock\utils\strings.js" />
+    <Content Include="lib\umbraco\types\imageCropModel.type.ts" />
+    <Content Include="lib\umbraco\types\linkWithChildren.type.ts" />
+    <Content Include="lib\umbraco\types\umbracoFormFieldCondition.type.ts" />
+    <Content Include="lib\umbraco\types\umbracoFormFieldConditionRule.type.ts" />
+    <Content Include="lib\umbraco\types\umbracoFormFieldset.type.ts" />
+    <Content Include="lib\umbraco\types\umbracoFormFieldsetContainer.type.ts" />
+    <Content Include="styles\button.scss" />
+    <Content Include="styles\grid.scss" />
+    <Content Include="styles\typography.scss" />
+    <Content Include="styles\util.scss" />
+    <Content Include="styles\variables.scss" />
+    <Content Include="common\components\grid\controls\widgets\entryBanner\entryBanner.module.scss" />
+    <Content Include="common\components\footer\footer.module.scss" />
+    <Content Include="common\components\header\header.module.scss">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="common\components\links\dropdown-link.module.scss" />
+    <Content Include="common\components\links\icon-link.module.scss" />
+    <Content Include="common\components\video\video.module.scss" />
+    <Content Include="next.config.js" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\vercel.svg" />
+    <Content Include="public\vercel.svg" />
+    <Content Include="public\vercel.svg" />
+    <Content Include="styles\globals.scss" />
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.js" />
+    <TypeScriptCompile Include="common\components\dialogs\globalDialog.tsx" />
+    <TypeScriptCompile Include="common\components\dialogs\dialogProvider.tsx" />
+    <TypeScriptCompile Include="common\components\dialogs\dialogTrigger.tsx" />
+    <TypeScriptCompile Include="common\components\dialogs\videoDialog.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\base.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\rte.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\widgets\carousel\carousel.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\widgets\carousel\layouts\services.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\widgets\columnLinks\columnLinks.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\widgets\cta\layouts\tileCta.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\widgets\linkBar\linkBar.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\widgets\textWithImages\textWithImages.tsx" />
+    <TypeScriptCompile Include="common\components\grid\grid.tsx" />
+    <TypeScriptCompile Include="common\components\header\hamburgerToggle.tsx" />
+    <TypeScriptCompile Include="common\components\inline-list\inline-list.tsx" />
+    <TypeScriptCompile Include="common\components\links\flexible-link.tsx" />
+    <TypeScriptCompile Include="common\components\links\circleLink.tsx" />
+    <TypeScriptCompile Include="common\components\links\imageLink.tsx" />
+    <TypeScriptCompile Include="common\components\links\vertical-link.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\widgets\entryBanner\entryBanner.tsx" />
+    <TypeScriptCompile Include="common\components\footer\footer.tsx" />
+    <TypeScriptCompile Include="common\components\header\header.tsx" />
+    <TypeScriptCompile Include="common\components\links\dropdown-link.tsx" />
+    <TypeScriptCompile Include="common\components\links\icon-link.tsx" />
+    <TypeScriptCompile Include="common\components\layout\layout.tsx" />
+    <TypeScriptCompile Include="common\components\loadingIndicator\loadingIndicator.tsx" />
+    <TypeScriptCompile Include="common\components\modal\general.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="common\components\umbracoForm\formApi.ts" />
+    <TypeScriptCompile Include="common\components\umbracoForm\umbracoForm.tsx" />
+    <TypeScriptCompile Include="common\components\video\video-thumbnail.tsx" />
+    <TypeScriptCompile Include="common\components\video\video-util.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="common\components\video\video.tsx" />
+    <TypeScriptCompile Include="common\components\zoomSlides\zoomSlidesNext.tsx" />
+    <TypeScriptCompile Include="common\components\zoomSlides\zoomSlides.tsx" />
+    <TypeScriptCompile Include="common\types\iparams.type.ts" />
+    <TypeScriptCompile Include="common\util\conditionalWrapper.tsx" />
+    <TypeScriptCompile Include="common\util\mapClass.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\carouselServiceModel.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\commonData.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\dimensions.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\flexibleLinkModel.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\focalPoint.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\gridCell.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\gridConfig.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\gridControl.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\gridRow.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\gridSection.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\hours.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\iconLinkModel.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\imageCrop.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\imageLinkModel.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\imageModel.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\nullable.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\pageData.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\umbracoFormModel.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\umbracoFormAllowedUploadType.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\umbracoFormField.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\umbracoFormPage.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\umbracoNode.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\videoModel.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\types\widgetModel.type.ts" />
+    <TypeScriptCompile Include="lib\umbraco\util\dataApi.ts" />
+    <TypeScriptCompile Include="lib\umbraco\util\helpers.ts" />
+    <TypeScriptCompile Include="lib\umbraco\util\publicDataApi.ts" />
+    <TypeScriptCompile Include="next-env.d.ts" />
+    <TypeScriptCompile Include="pages\api\collection.ts" />
+    <TypeScriptCompile Include="pages\api\forms\[id].ts" />
+    <TypeScriptCompile Include="pages\robots.txt.tsx" />
+    <TypeScriptCompile Include="pages\sitemap.xml.tsx" />
+    <TypeScriptCompile Include="pages\[[...slug]].tsx" />
+    <TypeScriptCompile Include="pages\_app.tsx" />
+    <TypeScriptCompile Include="common\components\grid\controls\widget.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="common\components\" />
+    <Folder Include="common\components\grid\controls\" />
+    <Folder Include="common\components\grid\controls\widgets\" />
+    <Folder Include="common\components\grid\controls\widgets\carousel\layouts\" />
+    <Folder Include="common\components\grid\controls\widgets\cta\layouts\" />
+    <Folder Include="common\components\grid\controls\widgets\linkBar\" />
+    <Folder Include="common\components\grid\controls\widgets\carousel\" />
+    <Folder Include="common\components\grid\controls\widgets\cta\" />
+    <Folder Include="common\components\grid\controls\widgets\columnLinks\" />
+    <Folder Include="common\components\grid\controls\widgets\textWithImages\" />
+    <Folder Include="common\components\header\" />
+    <Folder Include="common\components\layout\" />
+    <Folder Include="common\components\footer\" />
+    <Folder Include="common\components\links\" />
+    <Folder Include="common\components\inline-list\" />
+    <Folder Include="common\components\dialogs\" />
+    <Folder Include="common\components\grid\" />
+    <Folder Include="common\components\loadingIndicator\" />
+    <Folder Include="common\components\umbracoForm\" />
+    <Folder Include="common\components\zoomSlides\" />
+    <Folder Include="common\util\" />
+    <Folder Include="lib\greensock\" />
+    <Folder Include="lib\greensock\utils\" />
+    <Folder Include="lib\umbraco\" />
+    <Folder Include="lib\umbraco\util\" />
+    <Folder Include="lib\umbraco\types\" />
+    <Folder Include="modules\widgets\" />
+    <Folder Include="common\components\grid\controls\widgets\entryBanner\" />
+    <Folder Include="common\components\modal\" />
+    <Folder Include="common\components\video\" />
+    <Folder Include="modules\" />
+    <Folder Include="modules\newsletter\" />
+    <Folder Include="common\types\" />
+    <Folder Include="lib\" />
+    <Folder Include="pages\" />
+    <Folder Include="pages\api\" />
+    <Folder Include="pages\api\" />
+    <Folder Include="pages\api\forms\" />
+    <Folder Include="public\" />
+    <Folder Include="styles\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

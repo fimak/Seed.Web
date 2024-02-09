@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+:export {
+    breakpointSmall: map-get($breakpoints, small);
+    breakpointMedium: map-get($breakpoints, medium);
+    breakpointLarge: map-get($breakpoints, large);
+    breakpointXLarge: map-get($breakpoints, xlarge);
+    breakpointXXLarge: map-get($breakpoints, xxlarge);
+    smallHeaderHeight: unitless-calc($mobileHeaderHeight, 1) * 16;
+    largeHeaderHeight: unitless-calc($desktopHeaderHeight, 1) * 16;
+    white: $white;
+    offWhite: $offWhite;
+    blue: $blue;
+    textColor: $textColor;
+}

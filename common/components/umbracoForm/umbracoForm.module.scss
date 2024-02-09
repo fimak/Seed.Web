@@ -1,0 +1,206 @@
+@import '@styles/variables.scss';
+
+.umbracoForm {
+    width: 410px;
+    max-width: 100%;
+    .indicator {
+        color: $red;
+    }
+    .field {
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .fieldset + .fieldset {
+        margin-top: 1.875rem;
+    }
+    
+    .fieldLabel {
+        margin-bottom: .75rem;
+        display: inline-block;
+        font-weight: bold;
+        &.noMargin {
+            margin-bottom: 0;
+        }
+    }
+
+    .datepicker {
+        div {
+            border-radius: 0;
+        }
+        input {
+            padding-left: 1.5rem;
+        }
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .submitContainer {
+        margin-top: 1rem;
+    }
+
+    .error {
+        color: $white;
+        margin-top: 1rem;
+        background-color: $redLight;
+        padding: 5px 8px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 1rem;
+            border: 10px solid $redLight;
+            border-width: 0 10px 10px;
+            border-color: transparent transparent $redLight;
+        }
+    }
+
+    .customRadio, .customCheckbox {
+        input {
+            display: none;
+            &:checked {
+                + {
+                    label {
+                        &::before {
+                            border-color: $purple;
+                        }
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        label {
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0 39px;
+            font-weight: 300;
+            margin: 0 !important;
+            &:hover {
+                cursor: pointer;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 50%;
+                border: 1px solid $grey;
+                transition: border-color .3s;
+                height: 27px;
+                width: 27px;
+                left: 0;
+                margin-top: -14px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 50%;
+                margin-top: -8px;
+                height: 15px;
+                width: 15px;
+                background-color: $purple;
+                opacity: 0;
+                left: 6px;
+                transition: opacity 0.3s;
+            }
+        }
+        + .customRadio, + .customCheckbox {
+            margin-top: 1rem;
+        }
+    }
+
+    .customRadio {
+        label {
+            &::before {
+                border-radius: 15px;
+            }
+            &::after {
+                border-radius: 9px;
+            }
+        }
+    }
+
+    input.textField, .textArea, select {
+        border-radius: .6875rem;
+        border-width: 0;
+        background-color: $offWhite;
+        color: $blue;
+        &::placeholder {
+            color: rgba($blue, .6);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+    select {
+        height: 53px;
+    }
+
+    &.themeLargeText {
+        font-size: 1.5rem;
+
+        .fieldLabel {
+            font-weight: normal;
+        }
+
+        .customRadio, .customCheckbox {
+            &::before {
+                border-radius: 15px;
+                height: 29px;
+                width: 29px;
+                margin-top: -15px;
+            }
+            &::after {
+                margin-top: -9px;
+                height: 17px;
+                width: 17px;
+                border-radius: 9px;
+                left: 6px;
+            }
+        }
+    }
+
+    .customCheckbox {
+        &::before, &::after {
+            border-radius: 0;
+        }
+    }
+
+    input.textField, select, textarea {
+        width: 500px;
+        max-width: 100%;
+        padding: 1rem 1.5rem;
+        display: block;
+    }
+
+    &.darkBackground {
+        input.textField {
+            border-width: 0;
+        }
+        
+        .customRadio, .customCheckbox {
+            label {
+                color: $white;
+                &::before {
+                    border-color: $white;
+                }
+                &::after {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    &.themeWide {
+        width: 100%;
+    }
+}

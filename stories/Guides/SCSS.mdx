@@ -1,0 +1,45 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Guidelines/SCSS" />
+
+# SCSS
+- Use “breakpoint” mixin to add media queries to ensure consistent media queries throughout the project. They are defined in the $breakpoints variable in variables.scss. Syntax appears as follows.
+
+```css
+@include breakpoint(medium) {
+	//these styles will show be on screens wider or equal to the value set for the medium breakpoint
+}
+```
+
+- All global text styles should go in “/styles/typography.scss”
+- All global button styles should go in “/styles/button.scss.” Note that it’s ok if the styles are on a dedicated button component, since the styles are specific to that component.
+- Use sass variables defined in variables.scss. Below are some conventions for those variables.
+ - Colors - Choose one color to be the base color variable and name the other shades by appending one of the following depending on how it compares to the base color.
+  - Light
+  - Lighter
+  - Lightest
+  - Dark
+  - Darker
+  - Darkest
+ - Fonts - Each font should have its own variable with “Font” appended to the end of the font name.
+- All classes should use camel case to make them easier to use in the react components. They use module scss, so camel case allows the following syntax “styles.exampleClass.” If hyphen based classes were used instead, it would have to be done with “styles[‘example-class’],” which isn’t quite as clean.
+- The scss file should be structured in the following fashion
+
+```css
+//isolates the widget styles; not needed for module styles in the front end, but it is needed for the back end.
+.widget{widget name} {
+    ... //styles shared by all flavors of the widget should go here	
+
+    //this is for handling styles for versions of the widget with different content; for example one variant could render the widget with text inside, while another code have a video inside instead
+    &.variant{variant name} {
+        ...
+    }
+    //this is for handling styles for flavors of the widget where the content is the same, but laid out differently; a common case would be a widget with text that allows that text to be positioned on the left side of the widget or the right side
+    &.layout{layout name} {
+        ...
+    }
+}
+```
+
+- Generally padding should be handled with the existing padding classes to ensure consistent spacing throughout the project. There may be some widgets that deviate from this, but if the padding is close, they should use the padding classes instead. The padding classes use the convention
+**".\{breakpoint\}-padding-\{side\}-\{size\}"**. An example would be “small-padding-top-1.” The breakpoints are “small,” “medium” and “large,” while the sizes go up to 3. The padding amount for each size is configured in the $paddings variable in “/styles.variables.scss.” The same conventions exist for margins.

@@ -1,0 +1,28 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.imageWithBackdrop {
+    display: inline-block;
+    position: relative;
+    &::after {
+        box-shadow: 0 0 15px rgba($black, .5);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotateZ(-1deg) translate(-8%,-5%);
+        transform-origin: center;
+        background-color: $purple;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .image {
+        background-color: $white;
+        box-shadow: 0 0 15px rgba($black, .5);
+        transform: rotateZ(4deg);
+        transform-origin: center;
+        z-index: 2;
+    }
+}

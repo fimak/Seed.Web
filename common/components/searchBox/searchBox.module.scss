@@ -1,0 +1,35 @@
+@import '@styles/variables.scss';
+.searchBox {
+    display: inline-flex;
+    max-width: 100%;
+    input {
+        font-size: 1.75rem;
+        border: 1px solid $blue;
+        padding: 5px 10px 5px 20px;
+        border-radius: 25px 0 0 25px;
+        min-width: 200px;
+        width: auto;
+        &, &:focus, &:focus-visible {
+            outline: none;
+        }
+
+    }
+    button {
+        background-color: $blue;
+        color: $white;
+        width: 59px;
+        height: 49px;
+        padding-right: 10px;
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        transition: background-color .3s;
+        border-radius: 0 25px 25px 0;
+        &:hover, &:focus {
+            background-color: $purple;
+            cursor: pointer;
+        }
+    }
+}

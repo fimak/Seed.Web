@@ -1,0 +1,90 @@
+@import 'foundation-sites/scss/util/_unit.scss';
+
+/*---- FOUNDATION ----*/
+$global-width: rem-calc(1350);
+$grid-margin-gutters: (
+  "small": 20px,
+  "medium": 30px
+);
+$header-font-family: inherit;
+
+/*---- COLORS ----*/
+$white: #FFFFFF;
+$offWhite: #F3F8FB;
+$redLight: #f97a7a;
+$red: #B2334E;
+$black: #000000;
+$blueLight: #59B7DF;
+$blueLighter: #A1E3FF;
+$blueLightest: #F2FAFC;
+$blueLight2: #DEF5FF;
+$blueVibrant: #0098CE;
+$blueFaded: #8A92AA;
+$blue: #152456;
+$purpleLight: #AF97D9;
+$purple: #932789;
+$purpleDark: #482782;
+$greyLightest: #DFE1DF;
+$greyLighter: #CCC;
+$greyLight: #A1A1A4;
+$grey: #8E9089;
+$greyDark: #4E5259;
+$greyDarkest: #222;
+$greyBlue: #7f7aa3;
+$greenLight: #ACD468;
+$greenLightest: #EDF3D9;
+$green: #A6CE39;
+$orange: #ff9f1c;
+$orangeDark: #cc7f16;
+$textColor: $blue;
+$darkTextColor: $white;
+$blueBackgroundTextColor: $darkTextColor;
+$backdropColor: $black;
+
+/*---- FONTS ----*/
+$barlowFont: 'Barlow', sans-serif;
+$nocturneFont: 'nocturne-serif', serif;
+$floodFont: 'flood-std', sans-serif;
+$sofiaFont: 'sophia-pro', sans-serif;
+$museoSansFont: 'museo-sans', sans-serif;
+$defaultFont: $museoSansFont;
+$iconFont: 'jhp';
+
+/*---- LINK ----*/
+$linkColor: $blue;
+$linkHoverColor: $purple;
+$darkLinkColor: $white;
+$darkLinkHoverColor: $greenLight;
+$blueBackgroundLinkColor: $darkLinkColor;
+$blueBackgroundLinkHoverColor: $blueLight;
+
+/*---- BUTTON ----*/
+$buttonColor: $white;
+$buttonHoverColor: $white;
+$buttonBackgroundColor: $blue;
+$buttonBackgroundHoverColor: $purple;
+$outlineButtonColor: $buttonBackgroundColor;
+$outlineButtonHoverColor: $buttonHoverColor;
+$outlineButtonBackgroundColor: $white;
+$outlineButtonBackgroundHoverColor: $buttonBackgroundHoverColor;
+$arrowButtonColor: $buttonColor;
+$arrowButtonBackgroundColor: $buttonBackgroundColor;
+$arrowButtonHoverColor: $buttonHoverColor;
+$arrowButtonBackgroundHoverColor: $buttonBackgroundHoverColor;
+$videoButtonColor: $blue;
+$videoButtonHoverColor: $white;
+$videoButtonBackgroundColor: transparent;
+$videoButtonBackgroundHoverColor: $purple;
+
+/*---- SPACING ----*/
+$margins: (1: 1rem, 2: 2.5rem, 3: 7rem, 4: 10rem);
+$paddings: (1: 1rem, 2: 2.5rem, 3: 7rem, 4: 10rem);
+$mobileHeaderHeight: rem-calc(65);
+$desktopHeaderHeight: rem-calc(120);
+$breakpoints: (small: 0, medium:640px, large: 1024px, xlarge: 1200px, xxlarge:1440px);
+$breakpoint-classes: (small medium large xlarge xxlarge);
+$wideMaxWidth: rem-calc(1600);
+$grid-margin-gutters: (small: 20, medium: 40);
+$smallGutters: rem-calc(map-get($grid-margin-gutters, 'small') / 2);
+$mediumGutters: rem-calc(map-get($grid-margin-gutters, 'medium') / 2);
+$inlineListGutters: (1: 1rem, 2: 2rem, 3: 4rem);

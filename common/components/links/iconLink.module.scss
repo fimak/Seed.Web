@@ -1,0 +1,40 @@
+@import '../../../styles/variables.scss';
+
+.iconLink {
+    &.circleIcon {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 400;
+        color: $greyDark;
+        i {
+            width: 26px;
+            height: 26px;
+            border-radius: 13px;
+            background-color: $purpleDark;
+            transition: .3s background-color;
+            color: $white;
+            justify-content: center;
+            align-items: center;
+            font-size: .875rem;
+            display: inline-flex;
+        }
+        &:hover, &:focus {
+            color: $purple;
+            i{
+                background-color: $purple;
+            }
+        }
+    }
+
+    &.iconAfter {
+        i {
+            margin-left: .5rem;
+        }
+    }
+
+    &.iconBefore {
+        i {
+            margin-right: .5rem;
+        }
+    }
+}

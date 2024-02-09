@@ -1,0 +1,40 @@
+.grid {
+    .stretchCells {
+        .area {
+            > .cell {
+                display: flex;
+                > div, > div > div {
+                    width: 100%;
+                    display: flex;
+                }
+
+                > div > div {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(large) {
+    .wideGutters {
+        > .grid-container > .grid-x {
+            margin: 0 -3rem;
+            > .cell {
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+            @for $i from 1 through $grid-columns {
+                > .medium-#{$i} {
+                    width: calc(#{$i * 100%/ $grid-columns} - 6rem);
+                }
+            }
+        }
+    }
+}
+
+.grid-container {
+    &.wide {
+        max-width: rem-calc(1516);
+    }
+}

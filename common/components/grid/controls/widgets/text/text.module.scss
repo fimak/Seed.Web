@@ -1,0 +1,23 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetText {
+    &.hasBackground {
+        border-radius: 1.25rem;
+        padding: 2rem;
+    }
+
+    &.layoutCentered {
+        .text {
+            text-align: center;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+    }
+
+    @include breakpoint(large) {
+        &.hasBackground {
+            padding: 6rem 10rem;
+        }
+    }
+}

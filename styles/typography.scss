@@ -1,0 +1,300 @@
+a {
+    transition: all .3s;
+    &:not([class]) {
+        color: $linkColor;
+        display: inline-block;
+        transition: all .3s;
+        outline: none;
+
+        &:hover, &:focus {
+            color: $linkHoverColor;
+        }
+    }
+}
+
+
+h1, .h1 {
+    font-size: 3.75rem;
+    margin-bottom: 3rem;
+    line-height: normal;
+    font-weight: 700;
+    color: inherit;
+}
+
+h2, .h2 {
+    font-size: 2.25rem;
+    line-height: 2.875rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: inherit;
+}
+
+h3, .h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 2.75rem;
+    font-weight: 400;
+    color: inherit;
+}
+
+h4, .h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 2.125rem;
+    font-weight: 700;
+    color: inherit;
+}
+
+h5, .h5 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+h6, .h6 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    color: inherit;
+
+    .emphasize {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+}
+
+p{
+    line-height: 1.4;
+}
+
+.smallText {
+    font-size: .75rem;
+}
+
+.largeText {
+    font-size: 1.5rem;
+}
+
+.redText {
+    color: $red;
+}
+
+.greyText {
+    color: $greyDark;
+}
+
+.blueText {
+    color: $blue;
+}
+
+.lightBlueText {
+    color: $blueLight;
+}
+
+.greenText {
+    color: $greenLight;
+}
+
+.purpleText {
+    color: $purple;
+}
+
+.darkPurpleText {
+    color: $purpleDark;
+}
+
+img {
+    display: inline-block;
+}
+
+.noMargin {
+    margin: 0;
+}
+
+.noBullet {
+    list-style-type: none;
+}
+
+.capWidth {
+    width: 400px;
+    max-width: 100%;
+}
+
+.lined {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    &::before, &::after {
+        content: '';
+        height: 2px;
+        flex: 1 1 240px;
+        background-color: $blue;
+        max-width: 240px;
+        display: block;
+    }
+
+    &::before {
+        margin-right: 3.25rem;
+    }
+    &::after {
+        margin-left: 3.25rem;
+    }
+}
+
+h1,h2,h3 {
+    &.capWidth {
+        width: 659px;
+    }
+}
+
+.greenUnderline {
+    &::after {
+        content: '';
+        display: block;
+        background-color: $green;
+        height: 3px;
+        margin-top: .25em;
+    }
+}
+
+.inlineCta {
+    border: 1px solid $greyLighter;
+    padding: 25px;
+    margin: 1rem 0;
+    @include breakpoint(medium) {
+        max-width: 300px;
+        &.rightAligned {
+            float: right;
+            margin: 40px 0 40px 40px;
+        }
+    
+        &.leftAligned  {
+            float: left;
+            margin: 40px 40px 40px 0;
+        }
+    }
+}
+
+.floatLeft {
+    float: left;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
+
+.floatRight {
+    float: right;
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+}
+
+.verticallyCenterText {
+    display: flex;
+    align-items: center;
+}
+
+.greenCircle {
+    background-color: $green;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-right: 2rem;
+    border-radius: 24px;
+}
+
+.rte {
+    a:not([class]),a[class$=Text] {
+        text-decoration: underline;
+    }
+    li {
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    > *:last-child {
+        margin-bottom:0;
+    }
+}
+
+.tableContainer {
+    overflow-x: auto;
+    table {
+        line-height: 1.4;
+    }
+    tr {
+        &:nth-child(2n+1) {
+            background-color: $offWhite;
+        }
+        &:first-child {
+            font-weight: bold;
+            background-color: $purpleLight;
+        }
+    }
+    td {
+        vertical-align: top;
+        padding: .5rem;
+    }
+}
+
+.spaceButtons {
+    margin: 0 -1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    > a {
+        margin: 0 1rem 1.5rem;
+    }
+    &:last-child {
+        margin-bottom: -1.5rem;
+    }
+}
+
+.inlineButtons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem -1rem 1rem;
+    > a {
+        flex: 0 0 auto;
+        margin: 1rem 1rem 0
+    }
+}
+
+.darkBackground {
+    color: $darkTextColor;
+
+    h1, .h1 {
+        color: inherit;
+    }
+
+    a:not([class]) {
+        color: $darkLinkColor;
+
+        &:hover, &:focus {
+            color: $darkLinkHoverColor;
+        }
+    }
+}
+
+@include breakpoint(small only) {
+    h1, .h1 {
+        font-size: 3.25rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/*----ICON SIZE FIXES----*/
+.bmg-icon-a-plus-b {
+    &::before {
+        font-size: .75em;
+    }
+}
+.bmg-icon-vision {
+    &::before {
+        font-size: .5em;
+    }
+}

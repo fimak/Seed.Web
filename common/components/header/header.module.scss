@@ -1,0 +1,325 @@
+@import '../../../styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: $white;
+    &::after {
+        content: '';
+        height: 10px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-image: linear-gradient(to bottom, $greyLightest, transparent);
+        z-index: 1;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        height: 49px;
+        width: 128px;
+        display: block;
+        position: relative;
+    }
+
+    a {
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .mobileSearch {
+        margin-top: 1rem;
+        input {
+            font-size: 1.75rem;
+        }
+    }
+
+    @include breakpoint(xlarge down) {
+        padding: .5rem 0;
+
+        .main {
+            position: absolute;
+            left: 100%;
+            top: 100%;
+            width: 300px;
+            z-index: 3;
+            background-color: $offWhite;
+            transform: translateX(0);
+            height: calc(100vh - 100%);
+            transition: transform .3s;
+            display: flex;
+            flex-direction: column;
+
+            ul {
+                list-style: none;
+            }
+
+            > .button {
+                width: 100%;
+            }
+
+            a{
+                color: $white;
+            }
+        }
+
+        .dropdownLink {
+            a {
+                color: $blue;
+            }
+        }
+
+        .links {
+            padding: 1rem;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
+            flex-wrap: nowrap;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 100%);
+            background-color: $black;
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 2;
+            transition: all .3s;
+        }
+
+        .mainLinks {
+            order: -1;
+            flex: 1 1 auto;
+
+            > ul {
+                margin-left: 0;
+
+                > li + li {
+                    border-top: 1px solid rgba($white,.5);
+                }
+            }
+        }
+
+        .secondaryLinks {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 2rem;
+            > ul {
+                &:first-child {
+                    margin-left: 0;
+                    width: 100%;
+                }
+
+                > li + li {
+                    border-top: 1px solid rgba($white,.5);
+                }
+            }
+        }
+
+        &.menuOpen {
+            .main {
+                transform: translateX(-300px);
+            }
+
+            .overlay {
+                opacity: .4;
+                pointer-events: auto;
+                visibility: visible;
+
+                &:hover {
+                    opacity: .5;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .cultures {
+            margin: 0 auto 1rem;
+            li + li {
+                border-top-width: 0 !important;
+            }
+        }
+
+        .searchBox {
+            margin: 0 auto;
+        }
+
+        .hamburgerToggle {
+            font-size: 2rem;
+        }
+
+        .buttonsContainer {
+            text-align: center;
+        }
+    }
+
+    @include breakpoint(xxlarge) {
+        background-color: $white;
+        &.hasSecondary {
+            background-image: linear-gradient(to right, transparent 50%, $blue 50%);
+            background-size: 100% 44px;
+            background-repeat: no-repeat;
+            background-position: 100% top;
+            padding-bottom: 1rem;
+        }
+        &.noSecondary {
+            padding: 2.0625rem 0 1rem;
+        }
+
+        .container {
+            align-items: flex-end;
+        }
+
+        .links, .main {
+            flex: 1 1 auto;
+        }
+
+        .main {
+            display: flex;
+            position: relative;
+        }
+
+        .mainLinks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 1.5rem;
+            margin-left: 1rem;
+            li {
+                font-weight: 600;
+            }
+
+            .button {
+                margin-left: 2rem;
+            }
+        }
+
+        .buttonsContainer {
+            margin-left: 2rem;
+        }
+
+        .secondaryLinks {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: $blue;
+            position: relative;
+            font-size: 1rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 3rem;
+                border-radius: 0 19px 0 0;
+                background-color: $white;
+            }
+
+            a {
+                color: $white;
+                font-size: 1rem;
+                &:hover {
+                    color: $blueLight;
+                }
+            }
+        }
+
+        .searchContainer {
+            margin-left: 1.5rem;
+            position: relative;
+        }
+
+        .searchButton {
+            font-size: 1.5rem !important;
+            font-weight: 300;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            transition: all .3s;
+            &:hover, &:focus {
+                background-color: $purple;
+                color: $white !important;
+            }
+        }
+
+        .searchBox {
+            position: absolute;
+            top: 100%;
+            right: 0;
+        }
+
+        .secLinks {
+            position: relative;
+            top: .3125rem;
+        }
+
+        .cultures {
+            margin-left: 2.5rem;
+        }
+
+        .links {
+            text-align: right;
+        }
+
+        .logoContainer {
+            flex: 0 0 auto;
+        }
+
+        .logo {
+            height: 71px;
+            width: 273px;
+        }
+
+        .spaced {
+            margin-left: 1.5rem;
+        }
+
+        .searchBox {
+            margin-left: .625rem;
+        }
+    }
+
+    @media print {
+        position: relative;
+        .logo {
+            margin-top: 0;
+        }
+    }
+}
+
+.spacer {
+    height: 0;
+    &.active {
+        height: $mobileHeaderHeight;
+        @include breakpoint(xxlarge) {
+            height: $desktopHeaderHeight;
+        }
+    }
+    @media print {
+        display: none;
+    }
+}

@@ -1,0 +1,109 @@
+@import './variables.scss';
+.button {
+    &:hover:not([disabled]) {
+        cursor: pointer;
+    }
+}
+
+.button, .arrowButton, .videoButton, .outlineButton, .wideButton {
+    font-size: 1.125rem;
+    border-radius: 31px;
+    padding: 1rem 1rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.button, .wideButton, .arrowButton {
+    background-color: $buttonBackgroundColor;
+    transition: background-color .3s;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    color: $buttonColor;
+    min-width: 180px;
+    &:hover, &:focus {
+        color: $buttonHoverColor;
+        background-color: $buttonBackgroundHoverColor;
+    }
+    &.purpleButton {
+        background-color: $purple;
+        &:hover, &:focus {
+            background-color: darken($purple, 10%);
+        }
+    }
+    &[disabled] {
+        background-color: $blueFaded;
+    }
+}
+
+.wideButton {
+    width: 356px;
+    max-width: 100%;
+}
+
+.outlineButton {
+    border: 2px solid $outlineButtonColor;
+    color: $outlineButtonColor;
+    background-color: $outlineButtonBackgroundColor;
+    transition: background-color .3s;
+    padding: .875rem 2.375rem;
+    &:hover, &:focus {
+        color: $outlineButtonHoverColor;
+        background-color: $outlineButtonBackgroundHoverColor;
+        border-color: $outlineButtonBackgroundHoverColor;
+    }
+}
+
+.arrowButton {
+    &::after {
+        content: '\f005';
+        margin-left: 1.5rem;
+        font-family: $iconFont;
+    }
+}
+
+.buttonSmall {
+    min-width: 100px;
+    font-size: 1rem;
+    border-radius: 18px;
+    padding: .25rem 1rem;
+}
+
+.videoButton {
+    background-color: $videoButtonBackgroundColor;
+    border: 2px solid $videoButtonColor;
+    color: $videoButtonColor;
+    padding: .875rem 2.5rem;
+    transition: all .3s;
+    &::before {
+        content: '\f004';
+        font-size: 1.25em;
+        margin-right: .75rem;
+        font-family: $iconFont;
+    }
+    &:hover, &:focus {
+        background-color: $videoButtonBackgroundHoverColor;
+        border-color: $videoButtonBackgroundColor;
+        color: $videoButtonHoverColor;
+    }
+}
+
+.darkBackground {
+    .button, .wideButton {
+        color: $buttonBackgroundColor;
+        background-color: $buttonColor;
+        &:hover, &:focus {
+            color: $buttonHoverColor;
+            background-color: $buttonBackgroundHoverColor;
+        }
+    }
+    .arrowButton {
+        color: $arrowButtonBackgroundColor;
+        background-color: $arrowButtonColor;
+        &:hover, &:focus {
+            color: $arrowButtonHoverColor;
+            background-color: $arrowButtonBackgroundHoverColor;
+        }
+    }
+}

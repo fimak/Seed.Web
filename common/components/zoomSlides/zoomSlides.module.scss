@@ -1,0 +1,71 @@
+@import '../../../styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+.zoomSlides {
+    padding: 0 10px;
+    max-width: 100%;
+    color: $black;
+
+    .slideContainer {
+        margin: 0 -10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 10px;
+        position: relative;
+
+        &.right {
+            display: flex;
+
+            .slide {
+                padding: 1rem;
+                background-color: rgba($white, .7);
+                backdrop-filter: blur(10px);
+                display: none;
+                justify-content: flex-end;
+                flex-direction: column;
+                flex: 1 1 auto;
+
+                &:first-child {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .slide {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &:first-child {
+            display: block;
+            position: relative;
+        }
+    }
+
+    @include breakpoint(medium) {
+        .container {
+            width: 560px;
+            max-width: calc(100% - 20px);
+        }
+    }
+
+    @include breakpoint(large) {
+        .container {
+            min-height: 430px;
+
+            &.right {
+                .slide {
+                    padding: 2rem 6rem;
+                }
+            }
+        }
+    }
+}

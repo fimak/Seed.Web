@@ -1,0 +1,6 @@
+C:\Users\mugen\source\repos\anhc\Seed.Web\obj\Debug\Seed.Web.njsproj.AssemblyReference.cache
+C:\Users\mugen\source\repos\anhc\Seed.Web\obj\Debug\Seed.Web.njsproj.CoreCompileInputs.cache
+C:\Users\mugen\source\repos\anhc\Seed.Web\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\mugen\source\repos\hpp\Seed.Web\obj\Debug\Seed.Web.njsproj.AssemblyReference.cache
+C:\Users\mugen\source\repos\hpp\Seed.Web\obj\Debug\Seed.Web.njsproj.CoreCompileInputs.cache
+C:\Users\mugen\source\repos\hpp\Seed.Web\bin\Microsoft.NodejsTools.WebRole.dll

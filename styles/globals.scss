@@ -1,0 +1,68 @@
+@import './variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+@import 'nprogress/nprogress.css';
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-visibility-classes;
+@include foundation-xy-grid-classes;
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    color: $textColor;
+    background-color: $offWhite;
+    font-family: $defaultFont;
+    margin: 0;
+    overflow: hidden auto !important;
+    padding-right: 0 !important;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html, body {
+        scroll-behavior: smooth;
+    }
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.animationWrapper {
+    transform-origin: center 50vh;
+}
+
+[id] {
+    scroll-margin-top: $mobileHeaderHeight;
+}
+
+.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-container {
+    &.grid-container-wide {
+        max-width: $wideMaxWidth;
+    }
+}
+
+@include breakpoint(large) {
+    [id] {
+        scroll-margin-top: $desktopHeaderHeight;
+    }
+}
+
+@import './typography.scss';
+@import './util.scss';
+
+@import 'grid.scss';
+@import 'button.scss';

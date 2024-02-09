@@ -1,0 +1,61 @@
+@import '../../../styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.languageSelector {
+    background-color: $blue;
+    position: relative;
+    text-align: left;
+    a{
+        font-weight: 300;
+    }
+    i {
+        color: $blueLight;
+        margin-right: .5rem;
+    }
+
+    .current {
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+
+        &::after {
+            content: '';
+            display: block;
+            border-style: solid;
+            border-width: 5px 5px 0 5px;
+            border-color: $white transparent transparent;
+            margin-left: .5rem;
+            position: relative;
+        }
+    }
+    .dropdown {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: $blue;
+        list-style: none;
+        margin: 0;
+        z-index: 2;
+
+        a {
+            padding: .5rem;
+            display: block;
+            background-color: $blue;
+            &:hover, &:focus {
+                background-color: $purple;
+                color: $white;
+            }
+            &:focus {
+                color: red;
+            }
+        }
+    }
+
+    @include breakpoint(large down) {
+        .dropdown {
+            top: auto;
+            bottom: 100%;
+        }
+    }
+}

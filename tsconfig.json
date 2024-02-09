@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [ "dom", "dom.iterable", "esnext" ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": "./",
+    "paths": {
+      "@styles/*": [ "styles/*" ],
+      "@lib/*": [ "lib/*" ],
+      "@components/*": [ "common/components/*" ],
+      "@widgets/*": [ "common/components/grid/controls/widgets/*" ]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".stories/components/loadingIndicator.stories.tsx"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+
+.verticalLink {
+    transform: rotateZ(90deg);
+    transform-origin: bottom left;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 1rem;
+    padding-right: .5rem;
+    margin-top: -52px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 2.5rem;
+
+    i {
+        transform: rotateZ(-90deg);
+        transform-origin: center;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+}
+
+.verticalLinkWrapper {
+    width: 47px;
+    position: relative;
+}

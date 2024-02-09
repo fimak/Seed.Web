@@ -1,0 +1,9 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Guidelines/React" />
+
+# React
+- All variables should be typed with typescript. This is needed so that issues can be detected when the front end is built, which allows us to catch them before they reach the live site. Some documentation on how to use it can be found here. All of the components use typescript, so they can also be used as reference. However, don’t use the “any” type unless the type is truly unknown, as that doesn’t provide anything useful.
+- The whitespace between widgets should not be included in the widgets themselves. Instead add spacer divs between each widget on the template file. The project already has controls for the spacing that are outside of the widgets, so they are just placeholders to get the correct look when reviewing the front end only template.
+- Widgets that have been wired up to the backoffice will have two components. The original component name will be used for version integrated with the backoffice. The hard coded version will have “HardCoded” appended to the component name. So a widget named “Carousel,” the “Carousel” component would be for the back end integration and “CarouselHardCoded” would be for the version the front end dev is working against. The back end dev will be responsible for making these changes, but mentioning this for awareness.
+- Use the custom “Link” component rather than the one nextjs comes with. It’s a wrapper around the nextjs “Link” component that fixes a couple of issues with it.

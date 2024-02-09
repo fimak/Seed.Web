@@ -1,0 +1,16 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+.iconSquare {
+    background-color: $green;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    width: 81px;
+    height: 81px;
+    border-radius: 6px;
+    &::before {
+        font-size: inherit;
+    }
+}

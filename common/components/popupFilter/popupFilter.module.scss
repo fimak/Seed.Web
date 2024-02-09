@@ -1,0 +1,150 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+.popupFilter {
+    position: relative;
+    z-index: 10;
+    .openButton {
+        color: $greyDark;
+        padding: 1rem 1.5rem;
+        background-color: $white;
+        font-size: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        border-radius: .5rem;
+        transition: all .3s;
+        .icon {
+            color: $white;
+            background-color: $green;
+            display: flex;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 1rem;
+            align-items: center;
+            justify-content: center;
+            margin-left: 2rem;
+        }
+        &:hover, &:focus {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+
+    .close {
+        font-size: 2rem;
+        position: absolute;
+        right: 1.25rem;
+        top: 1rem;
+        color: $greyLight;
+        &:hover, &:focus {
+            color: $red;
+        }
+    }
+
+    .panel {
+        background-color: $white;
+        z-index: 10;
+    }
+
+    .options {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .option {
+        background-color: $offWhite;
+        border-radius: .5rem;
+        font-weight: 600;
+        color: $greyDark;
+        padding: 1rem 1.5rem;
+        transition: all .3s;
+        display: inline-flex;
+        align-items: center;
+        &::before {
+            content: '';
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: .75rem;
+            border: 1px solid $black;
+            background-color: $white;
+            transition: all .3s;
+            margin-right: 1.5rem;
+            flex: 0 0 auto;
+        }
+        &:hover, &:focus {
+            background-color: $blue;
+            color: $white;
+        }
+        &.active {
+            background-color: $blue;
+            color: $white;
+            &::before {
+                border-color: $white;
+                background-color: $green;
+            }
+        }
+    }
+
+    @include breakpoint(large down) {
+        .panel {
+            width: 300px;
+            padding: 4rem 2rem 2rem;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            height: calc(100vh - $mobileHeaderHeight);
+        }
+
+        .overlay {
+            background-color: rgba($black, .7);
+            position: absolute;
+            top: 0;
+            right: 100%;
+            width: calc(100vw - 100%);
+            height: 100%;
+        }
+
+        .filters {
+            display: flex;
+            flex-direction: column;
+            max-height: 100%;
+        }
+
+        .options {
+            overflow: auto;
+            > li {
+                width: 100%;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .option {
+            width: 100%;
+        }
+
+        .buttonContainer {
+            flex: 0 0 auto;
+            margin-top: 1rem;
+        }
+    }
+
+    @include breakpoint(large) {
+        .panel {
+            padding: 6rem 2rem;
+            border-radius: 1.25rem;
+            position: absolute;
+            left: 50%;
+            margin-left: #{-$grid-container  / 2 + $mediumGutters};
+            width: $grid-container - $mediumGutters * 2;
+            top: 0;
+            box-shadow: 0 0 10px rgba($grey, .5);
+        }
+
+        .option {
+            margin-bottom: 4rem;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import '@styles/variables.scss';
+
+.alertDialog {
+    border: 10px solid $blue;
+    padding: 30px 5px;
+
+    .close {
+        border: 2px solid $blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -20px;
+        right: 15px;
+        height: 30px;
+        width: 30px;
+        background-color: $white;
+        color: $red;
+        &:hover, &:active {
+            background-color: $offWhite;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '@styles/variables.scss';
+.submitButton {
+    position: relative;
+    .loadingIndicator {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -16px;
+        margin-top: -16px;
+    }
+    &[disabled] {
+        color: transparent;
+    }
+}

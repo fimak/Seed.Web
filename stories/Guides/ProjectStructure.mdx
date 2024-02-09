@@ -1,0 +1,12 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Guidelines/Project Structure" />
+
+# Project Structure
+- The templates can be found at “/stories/pages/\{template\}.tsx.”
+ - \{component name in camel case\} - the folder for the component
+ - \{component name in camel case\}.module.scss - the scss for the component
+ - \{component name in camel case\}.txt - the component
+- The header, footer and layout folders should go under “/common/components/.”
+- All widget folders should go under “/common/components/grid/controls/widgets/” to match the existing file structure.
+- Files should go under "/content/media/" and be referrenced with urls starting with "/media/." The project is configured to use the content folder as a root for any static content.

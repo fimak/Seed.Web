@@ -1,0 +1,168 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+.widgetTabs {
+    &.variantSideTabs {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 1rem 4rem;
+        &.noCta {
+            align-items: center;
+        }
+    
+        .navigation, .sideBox, .cta {
+            background-color: $white;
+            border-radius: 19px;
+        }
+    
+        .title {
+            padding-left: 3.625rem;
+        }
+    
+        .sideBox {
+            grid-column-start: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            overflow: hidden;
+    
+            h4 {
+                background-color: $green;
+                padding: 1.5rem 2rem;
+                text-align: center;
+            }
+    
+            .sideText {
+                padding: 3.25rem 6rem;
+            }
+        }
+    
+        .cta {
+            background-color: $blue;
+            text-align: center;
+            padding: 3.5rem;
+        }
+    
+        .navigation {
+            padding: 2rem;
+            .navTrigger {
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 700;
+                border-radius: 11px;
+                padding: 0 2rem 0 1rem;
+                transition: all .3s;
+                background-color: transparent;
+    
+                span {
+                    flex: 1 1 auto;
+                    padding: .75rem 0;
+                    border-bottom: 1px solid $greyLightest;
+                }
+            }
+            .triggers {
+                list-style: none;
+                > li {
+                    margin-bottom: 2px;
+                    &:last-child {
+                        margin-bottom: 0;
+                        .navTrigger {
+                            span {
+                                border-bottom-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .navIcon {
+                font-size: 1.75em;
+                color: transparent;
+            }
+    
+            .text {
+                display: none;
+            }
+            .active .navTrigger, .navTrigger:hover, .navTrigger:focus  {
+                background-color: $blue;
+                color: $white;
+                .navIcon {
+                    color: $greenLight;
+                }
+    
+                span {
+                    border-bottom-color: transparent;
+                }
+            }
+    
+            .navTrigger:hover, .navTrigger:focus {
+                background-color: rgba($blue, .8);
+            }
+        }
+
+        .navigation {
+            .active {
+                .text {
+                    display: block;
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+
+        &.themeCool {
+            .navTrigger {
+                color: $blue;
+            }
+        }
+    
+        @include breakpoint(medium down) {
+            .navTrigger, .active {
+                margin-bottom: 1.5rem;
+            }
+    
+            .sideBox {
+                display: none;
+            }
+        }
+    
+        @include breakpoint(large) {
+            grid-template-columns: 460px 1fr;
+            .navigation {
+                .active .text {
+                    display: none;
+                }
+            }
+            &.layoutCta {
+                .sideBox {
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    overflow: visible;
+                    top: -1rem;
+                    position: relative;
+                }
+                .tile {
+                    position: relative;
+                    z-index: 1;
+                }
+                .sideText {
+                    background-color: $blue;
+                    border-radius: 1.25rem;
+                    text-align: center;
+                    padding-top: 7rem;
+                    padding-bottom: 7rem;
+                }
+                .backdrop {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 2rem;
+                    top: 2rem;
+                    z-index: -1;
+                    background-color: $green;
+                    border-radius: 1.25rem;
+                }
+            }
+        }
+    }
+}

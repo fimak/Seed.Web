@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+    background-color: rgba($backdropColor, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

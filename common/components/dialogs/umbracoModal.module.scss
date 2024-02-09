@@ -1,0 +1,44 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.umbracoModal {
+    .content {
+        &::after {
+            content: '';
+            display: block;
+            height: 1.875rem;
+        }
+    }
+
+    .close {
+        border: 2px solid $blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -20px;
+        right: 15px;
+        height: 30px;
+        width: 30px;
+        background-color: $white;
+        color: $red;
+        &:hover, &:active {
+            background-color: $offWhite;
+        }
+    }
+
+    @each $breakpoint in $breakpoint-classes {
+        @include breakpoint($breakpoint) {
+            $gutter: rem-calc(map-get($grid-margin-gutters, $breakpoint));
+    
+            @if ($gutter != null) {
+                .content {
+                    padding-top: $gutter;
+                    &::after {
+                        height: $gutter;
+                    }
+                }
+            }
+        }
+    }
+}

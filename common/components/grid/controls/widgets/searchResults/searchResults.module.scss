@@ -1,0 +1,35 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetSearchResults {
+    margin-bottom: -1rem;
+    background-color: $white;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    .item {
+        border-bottom: 1px solid $greyLighter;
+        margin-bottom: 1rem;
+        padding-bottom: .5rem;
+        a {
+            *:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .learnMore, h3 {
+            text-decoration: underline;
+        }
+
+        p {
+            color: $black;
+        }
+
+        .learnMore {
+            font-size: .875rem;
+            color: inherit;
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding: 7rem;
+    }
+}

@@ -1,0 +1,22 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.newsletterTile {
+    background-color: $white;
+    border-radius: 1.125rem;
+    padding: 2rem;
+    text-align: center;
+    .links {
+        margin: 0;
+        list-style: none;
+        font-weight: bold;
+
+        li {
+            margin-bottom: .25rem;
+        }
+    }
+    > .image {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}

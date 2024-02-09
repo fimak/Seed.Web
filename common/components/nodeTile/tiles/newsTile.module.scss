@@ -1,0 +1,12 @@
+@import '@styles/variables.scss';
+.newsTile {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid $greyLightest;
+
+    a {
+        color: $purpleDark;
+        &:hover, &:focus {
+            color: $purple;
+        }
+    }
+}

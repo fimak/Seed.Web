@@ -1,0 +1,41 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.grid {
+    .standardizeHeight {
+        .area {
+            > .cell {
+                &, & > div {
+                    display: flex;
+                }
+                > div {
+                    &, & > div {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .row {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .backgroundNoCover {
+        background-size: 100% auto;
+    }
+    @media print {
+        .row {
+            &.sidebarLeft {
+                .cell:first-child {
+                    display: none;
+                }
+                .cell:last-child {
+                    width: calc(100% - #{rem-calc(map-get($grid-margin-gutters, medium))});
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

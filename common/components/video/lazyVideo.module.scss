@@ -1,0 +1,27 @@
+@import '@styles/variables.scss';
+.lazyVideo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    .play {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 6rem;
+        z-index: 2;
+        color: $red;
+        background-color: rgba($blue, .5);
+        opacity: .7;
+        transition: .3s opacity;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

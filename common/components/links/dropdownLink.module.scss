@@ -1,0 +1,160 @@
+@import '../../../styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.dropdownLink {
+    font-weight: bold;
+    position: relative;
+
+    .links {
+        list-style: none;
+        padding: 0;
+    }
+
+    @include breakpoint(xlarge down) {
+        .links {
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            transition: height .3s;
+        }
+
+        .linkBlock {
+            display: flex;
+
+            a {
+                padding: .5rem;
+
+                &:first-child {
+                    background-color: rgba($black, .2);
+                    flex: 1 1 auto;
+
+                    &:hover, &:focus {
+                        background-color: rgba($black, .3);
+                    }
+                }
+            }
+        }
+
+        .expander {
+            color: $white;
+            width: 46px;
+            display: flex;
+            justify-content: center;
+            background-color: rgba($black, .5);
+            align-items: center;
+            flex: 0 0 auto;
+
+            &::before {
+                transition: transform .3s;
+                transform: rotateZ(0deg);
+            }
+
+            &.active {
+                &::before {
+                    transform: rotateZ(90deg);
+                }
+            }
+
+            &:hover, &:focus {
+                color: $white;
+                background-color: rgba($black, .6);
+            }
+        }
+
+        .links {
+            li {
+                padding: .5rem;
+            }
+        }
+    }
+
+
+    @include breakpoint(xxlarge) {
+        .dropdown {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            top: 100%;
+            text-align: left;
+            z-index: 2;
+            left: -.75rem;
+            &::before {
+                content: '';
+                display: block;
+                height: 1.25rem;
+                width: calc(100% + 1.5rem);
+                position: relative;
+                border: 1px solid $offWhite;
+                border-width: 0 1px;
+                margin-bottom: -1px;
+                z-index: 3;
+                background-color: $white;
+            }
+        }
+
+        .links {
+            margin-left: 0;
+            background-color: $white;
+            transform-origin: top center;
+            width: 300px;
+            min-width: calc(100% + 4rem);
+            padding: 1em 1rem 1rem 1.75rem;
+            border: 1px solid $offWhite;
+            li {
+                font-weight: 500;
+            }
+        }
+
+        .linkBlock {
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                height: calc(100% + .5rem + 1px);
+                width: calc(100% + 1.5rem);
+                top: -.5rem;
+                left: -.75rem;
+                border: 1px solid $offWhite;
+                border-bottom-color: $white;
+                background-color: $white;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                z-index: 4;
+            }
+        }
+
+        li + li {
+            margin-top: .625em;
+        }
+
+        .parentLink {
+            color: $blue;
+            &:not(.noLink) {
+                &:hover, &:focus {
+                    color: $purple;
+                }
+            }
+            &.noLink {
+                &:hover {
+                    cursor: default;
+                }
+            }
+        }
+
+        &:hover, &:focus {
+            .dropdown, &.hasChildren .linkBlock::before {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            .parentLink {
+                position: relative;
+                z-index: 5;
+            }
+        }
+    }
+}

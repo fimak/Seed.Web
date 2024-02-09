@@ -1,0 +1,12 @@
+@import '@styles/variables.scss';
+
+.iconCircle {
+    height: 112px;
+    width: 112px;
+    border-radius: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.75rem;
+    color: $white;
+}
