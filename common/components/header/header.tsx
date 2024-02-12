@@ -13,7 +13,9 @@ export type HeaderModel = {
 
 export default function Header(model: HeaderModel) {
     return (
-        <p>Implement header.</p>
+        <header>
+            <p>Implement header.</p>
+        </header>
     )
 }
 
@@ -85,7 +87,7 @@ export default function Header(model: HeaderModel) {
 //                     </div>
 //                     <div className={styles.main + ' hide-for-print'}>
 //                         <div className={styles.links}>
-//                             {data.secondaryLinks && 
+//                             {data.secondaryLinks &&
 //                                 <div className={styles.secondaryLinks}>
 //                                     <InlineList restrict="xxlarge" className={styles.secLinks + ' narrow'}  divider={true} items={data.secondaryLinks.map(item =>
 //                                         <DropdownLink className={styles.dropdownLink} {...item} />
