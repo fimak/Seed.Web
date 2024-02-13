@@ -1,0 +1,26 @@
+.burgerMenu {
+  .trigger {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 39px;
+    height: 39px;
+    background: #EFF9FE;
+    border-radius: 4px;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 3px;
+
+    .line {
+      width: 19px;
+      height: 1px;
+      background: #002E60;
+      &.short {
+        width: 10px;
+      }
+    }
+  }
+}
