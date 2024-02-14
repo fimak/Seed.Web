@@ -77,34 +77,37 @@ const Slideshow: React.FC<WidgetModel> = (model) => {
               <strong>{item.subject}</strong>
             </h2>
 
-            <div
-              className={styles.videoWrapper}
-              style={{ backgroundImage: `url(${item.videoThumbnail})` }}
-              onClick={handleThumbnailClick}
-            >
-              {!showVideo && (
-                <div className={styles.play}>
-                  <Image
-                    src="/media/icons/play-arrow.svg"
-                    alt="play"
-                    width={11}
-                    height={14}
-                  />
-                </div>
-              )}
-              {showVideo && (
-                <video
-                  className={styles.video}
-                  width="360"
-                  height="215"
-                  controls
-                  autoPlay
-                  muted
-                >
-                  <source src={item.video} type="video/mp4" />
-                </video>
-              )}
-            </div>
+            {item.video && item.videoThumbnail && (
+              <div
+                className={styles.videoWrapper}
+                style={{ backgroundImage: `url(${item.videoThumbnail})` }}
+                onClick={handleThumbnailClick}
+              >
+                {!showVideo && (
+                  <div className={styles.play}>
+                    <Image
+                      src="/media/icons/play-arrow.svg"
+                      alt="play"
+                      width={11}
+                      height={14}
+                    />
+                  </div>
+                )}
+                {showVideo && (
+                  <video
+                    className={styles.video}
+                    width="360"
+                    height="215"
+                    controls
+                    autoPlay
+                    muted
+                  >
+                    <source src={item.video} type="video/mp4" />
+                  </video>
+                )}
+              </div>
+            )}
+
             <button className={styles.slideButton}>
               <span dangerouslySetInnerHTML={{ __html: item.link.label }} />
               <Image
