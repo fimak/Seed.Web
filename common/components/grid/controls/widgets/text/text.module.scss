@@ -2,22 +2,52 @@
 @import 'foundation-sites/scss/foundation.scss';
 
 .widgetText {
+  padding: 0 10px;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+
+  h2, h3 {
+    text-transform: uppercase;
+    color: #002E60;
+    letter-spacing: 0;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #6E7981;
+  }
+
+  &.hasBackground {
+    border-radius: 1.25rem;
+    padding: 2rem;
+  }
+
+  &.layoutCentered {
+    .text {
+      text-align: center;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpoint(large) {
     &.hasBackground {
-        border-radius: 1.25rem;
-        padding: 2rem;
+      padding: 6rem 10rem;
     }
-
-    &.layoutCentered {
-        .text {
-            text-align: center;
-            max-width: 950px;
-            margin: 0 auto;
-        }
-    }
-
-    @include breakpoint(large) {
-        &.hasBackground {
-            padding: 6rem 10rem;
-        }
-    }
+  }
 }
