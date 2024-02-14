@@ -1,11 +1,17 @@
+import Rte from "@components/grid/controls/rte";
 import { WidgetModel } from "@lib/umbraco/types/widgetModel.type";
+import { FC } from "react";
 import WidgetWrapper from "../widgetWrapper";
 import styles from "./textColumns.module.scss";
 
-export default function TextColumns(model: WidgetModel) {
+const TextColumns: FC<WidgetModel> = (model) => {
   return (
     <WidgetWrapper model={model} styles={styles}>
-      <p>Markup goes here.</p>
+      {model.content.items.map((el: NodeJS.Dict<any>) => (
+        <Rte className={styles.text} text={el.text} key={el.text} />
+      ))}
     </WidgetWrapper>
   );
-}
+};
+
+export default TextColumns;

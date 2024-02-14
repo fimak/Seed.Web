@@ -20,7 +20,9 @@ export const Home: React.FC = () => {
       <Banner {...(HomeContent.banner!.imageLeftAligned as WidgetModel)} />
       {/*<PinnedLinks {...(HomeContent.pinnedLinks!.bottom as WidgetModel)} />*/}
       <Text {...(HomeContent.text!.theFinest as WidgetModel)} />
-      <TextColumns {...(HomeContent.textColumns!.thinDivider as WidgetModel)} />
+      <TextColumns
+        {...(HomeContent.textColumns!.unmatchedQuality as WidgetModel)}
+      />
       <Carousel {...(HomeContent.carousel!.boats as WidgetModel)} />
       <Text {...(HomeContent.text!.aboveTheRest as WidgetModel)} />
       <Slideshow {...(HomeContent.slideshow!.standard as WidgetModel)} />
