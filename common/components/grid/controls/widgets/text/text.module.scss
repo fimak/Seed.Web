@@ -26,10 +26,34 @@
   }
 
   p {
+    display: flex;
     font-size: 16px;
     font-weight: 300;
     line-height: 26px;
     color: #6E7981;
+
+    a {
+      cursor: pointer;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      border: 2px solid #85D0CC;
+      border-radius: 10px;
+      padding: 22px 43px;
+      margin: 26px auto 125px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: #002E60;
+
+      strong {
+        font-weight: 600;
+      }
+    }
   }
 
   &.hasBackground {

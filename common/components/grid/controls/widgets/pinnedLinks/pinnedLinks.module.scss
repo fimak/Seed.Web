@@ -1,9 +1,9 @@
 @import '@styles/variables.scss';
 @import 'foundation-sites/scss/foundation.scss';
 .widgetPinnedLinks {
-  position: fixed;
+  //position: fixed;
   width: calc(100% - 20px);
-  margin: 0 10px;
+  margin: 0 10px 55px;
   height: 75px;
   border-radius: 6px;
   border-bottom-left-radius: 0;

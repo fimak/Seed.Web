@@ -13,6 +13,7 @@
     padding: 48px 15px 0;
     box-sizing: border-box;
     justify-content: space-between;
+    z-index: 10;
 
     &:before {
       content: '';
@@ -26,6 +27,10 @@
       box-sizing: border-box;
       background-image: linear-gradient(to bottom, #002D56, transparent);
       z-index: -1;
+    }
+
+    img {
+      z-index: 1;
     }
   }
 }
