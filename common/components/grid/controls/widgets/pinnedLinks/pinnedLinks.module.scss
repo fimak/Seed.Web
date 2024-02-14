@@ -1,4 +1,62 @@
 @import '@styles/variables.scss';
 @import 'foundation-sites/scss/foundation.scss';
 .widgetPinnedLinks {
+  position: fixed;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  height: 75px;
+  border-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.variant {
+    &Standard {
+      background-color: #002E60;
+    }
+  }
+
+  &.layout {
+    &Bottom {
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  nav {
+    display: flex;
+
+    a {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Montserrat, sans-serif;
+      font-weight: 300;
+      line-height: 14px;
+      letter-spacing: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #FFFFFF;
+
+      img {}
+
+      span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6px;
+
+        strong {}
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid #6E7981;
+      }
+    }
+  }
 }
