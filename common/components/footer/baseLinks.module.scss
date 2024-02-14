@@ -1,0 +1,29 @@
+.baseLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+
+  .linksWrapper {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 10px;
+
+    .linkLabel {
+      color: #ABBACA;
+      padding-right: 10px;
+      text-decoration: none;
+      border-right: 1px solid #ABBACA;
+
+      &.nonBorder {
+        border: none;
+      }
+    }
+  }
+}
+
+

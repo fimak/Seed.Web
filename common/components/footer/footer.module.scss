@@ -2,7 +2,26 @@
 @import 'foundation-sites/scss/foundation.scss';
 
 .footer {
-  .socialMedia {
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
 
+  .container {
+    background-color: #002D56;
+    border-radius: 20px;
+    padding: 62px 40px 58px;
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #ABBACA;
   }
 }

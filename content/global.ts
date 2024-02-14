@@ -172,6 +172,18 @@ export const FooterContent = {
               label: "Events & Boat Shows",
               url: "https://google.com",
             },
+            {
+              label: "Contact",
+              url: "https://google.com",
+            },
+            {
+              label: "Find Your Dealer",
+              url: "https://google.com",
+            },
+            {
+              label: "Store",
+              url: "https://google.com",
+            },
           ],
         },
       ],

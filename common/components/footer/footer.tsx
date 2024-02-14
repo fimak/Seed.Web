@@ -1,8 +1,12 @@
 import { BasicLink } from "@components/header/header";
-import Link from "next/link";
-import Image from "next/image";
 import { FC } from "react";
 import styles from "./footer.module.scss";
+import Columns from "@components/footer/columns";
+import SocialLinks from "@components/footer/socialLinks";
+import ButtonsGroup from "@components/footer/buttonsGroup";
+import Logos from "@components/footer/logos";
+import Rte from "@components/grid/controls/rte";
+import BaseLinks from "@components/footer/baseLinks";
 
 export type IconLink = {
   icon: string;
@@ -33,21 +37,27 @@ export type FooterModel = {
   baseLogos: ImageLink[];
 };
 
-const Footer: FC<FooterModel> = ({ socialMedia }) => {
+const Footer: FC<FooterModel> = ({
+  socialMedia,
+  columns,
+  dealerLoginLink,
+  subscribeLink,
+  copyright,
+  baseLinks,
+}) => {
   return (
-    <footer>
-      <nav className={styles.socialMedia}>
-        {socialMedia.map((link) => (
-          <Link href={link.url} key={link.icon}>
-            <Image
-              src={`/media/icons/${link.icon}.svg`}
-              alt={link.icon}
-              width={36}
-              height={36}
-            />
-          </Link>
-        ))}
-      </nav>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <SocialLinks socialMedia={socialMedia} />
+        <Columns columns={columns} />
+        <ButtonsGroup
+          dealerLoginLink={dealerLoginLink}
+          subscribeLink={subscribeLink}
+        />
+        <Logos />
+        <Rte text={copyright} className={styles.copyright} />
+        <BaseLinks baseLinks={baseLinks} />
+      </div>
     </footer>
   );
 };

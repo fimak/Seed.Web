@@ -22,7 +22,6 @@ const Header: FC<HeaderModel> = ({ logo, mainLinks, secondaryLinks }) => {
     if (window.scrollY <= 100) {
       setOpacity(window.scrollY / 100);
     }
-    console.log(window.scrollY);
   };
 
   useEffect(() => {

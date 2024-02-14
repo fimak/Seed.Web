@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 30px;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+
+  p {
+    margin: 0;
+  }
+
+  .text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+
+  .linkLabel {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+}
