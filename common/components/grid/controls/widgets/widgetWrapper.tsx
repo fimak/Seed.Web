@@ -1,4 +1,4 @@
-import { useCommonDataContext } from "@components/layout/layout";
+// import { useCommonDataContext } from "@components/layout/layout";
 import { WidgetModel } from "@lib/umbraco/types/widgetModel.type";
 import { CSSProperties, forwardRef, ReactNode, RefObject } from "react";
 
@@ -11,6 +11,7 @@ export type WidgetExportModel = {
   ref: RefObject<HTMLDivElement>;
 };
 
+// eslint-disable-next-line react/display-name
 const WidgetWrapper = forwardRef<HTMLDivElement, WidgetExportModel>(
   ({ model, styles = {}, className = "", style, children }, ref) => {
     // var data = useCommonDataContext();

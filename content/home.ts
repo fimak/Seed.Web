@@ -603,9 +603,9 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
                 `,
         items: [
           {
-            background: "https://placehold.it/1920x1080",
+            background: "/media/slideshow/slideshow-fishing.jpg",
             subject: "Fishing",
-            videoThumbnail: "https://placehold.it/360x215",
+            videoThumbnail: "/media/slideshow/thumbnail-fishing.jpeg",
             video: "https://example.com/video.mp4",
             link: {
               label: "View <strong>fishing features</strong>",
@@ -613,9 +613,9 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             },
           },
           {
-            background: "https://placehold.it/1920x1080",
+            background: "/media/slideshow/slideshow-leisure.jpeg",
             subject: "Leisure",
-            videoThumbnail: "https://placehold.it/360x215",
+            videoThumbnail: "/media/slideshow/thumbnail-leisure.jpeg",
             video: "https://example.com/video.mp4",
             link: {
               label: "View <strong>leisure features</strong>",
@@ -623,9 +623,9 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             },
           },
           {
-            background: "https://placehold.it/1920x1080",
+            background: "/media/slideshow/slideshow-durability.jpeg",
             subject: "Durability",
-            videoThumbnail: "https://placehold.it/360x215",
+            videoThumbnail: "/media/slideshow/thumbnail-durability.jpeg",
             video: "https://example.com/video.mp4",
             link: {
               label: "View <strong>our standards</strong>",
@@ -633,9 +633,9 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             },
           },
           {
-            background: "https://placehold.it/1920x1080",
+            background: "/media/slideshow/slideshow-entertaining.jpeg",
             subject: "Entertaining",
-            videoThumbnail: "https://placehold.it/360x215",
+            videoThumbnail: "/media/slideshow/thumbnail-entertaining.jpeg",
             video: "https://example.com/video.mp4",
             link: {
               label: "View <strong>our features</strong>",
@@ -643,7 +643,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             },
           },
           {
-            background: "https://placehold.it/1920x1080",
+            background: "/media/slideshow/slideshow-you.jpeg",
             subject: "You",
             link: {
               label: "Build your <strong>dream boat</strong>",
