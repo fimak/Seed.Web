@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
   return (
     <Layout>
       <Banner {...(HomeContent.banner!.imageLeftAligned as WidgetModel)} />
-      <PinnedLinks {...(HomeContent.pinnedLinks!.bottom as WidgetModel)} />
+      {/*<PinnedLinks {...(HomeContent.pinnedLinks!.bottom as WidgetModel)} />*/}
       <Text {...(HomeContent.text!.theFinest as WidgetModel)} />
       <TextColumns {...(HomeContent.textColumns!.thinDivider as WidgetModel)} />
       <Carousel {...(HomeContent.carousel!.boats as WidgetModel)} />

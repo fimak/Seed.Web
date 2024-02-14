@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5DDEE14E-831F-4706-8DC5-7FC089AF51BB</title>
+    <defs>
+        <path d="M22.0290114,34.5 L18.2972551,34.5 L18.2972551,22.8164062 L22.0290114,22.8164062 L22.0290114,34.5 Z M20.1611247,21.2226562 C18.9680875,21.2226562 18,20.2617188 18,19.1015625 C18,17.9414062 18.9680875,17 20.1611247,17 C21.354162,17 22.3222495,17.9414062 22.3222495,19.1015625 C22.3222495,20.2617188 21.354162,21.2226562 20.1611247,21.2226562 Z M35.995983,34.5 L32.2722607,34.5 L32.2722607,28.8125 C32.2722607,27.4570312 32.2441419,25.71875 30.3320687,25.71875 C28.3918768,25.71875 28.0946217,27.1914062 28.0946217,28.7148438 L28.0946217,34.5 L24.3668824,34.5 L24.3668824,22.8164062 L27.9459942,22.8164062 L27.9459942,24.4101562 L27.9982147,24.4101562 C28.4963178,23.4921875 29.7134568,22.5234375 31.529123,22.5234375 C35.3050658,22.5234375 36,24.9414062 36,28.0820312 L36,34.5 L35.995983,34.5 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Regulator---homepage---concept-FINAL" transform="translate(-405, -18348)">
+            <g id="footer" transform="translate(73, 17897)">
+                <g id="social" transform="translate(137, 451)">
+                    <g id="Group-3" transform="translate(195, 0)">
+                        <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="55" height="55" rx="8"></rect>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="linkedin-in" fill="#002E60" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
