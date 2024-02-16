@@ -320,7 +320,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
               label: "Learn More",
               url: "https://google.com",
             },
-            background: "https://placehold.it/1774x544",
+            background: "/media/carousel/carousel-benefits.jpeg",
           },
           {
             text: `
@@ -331,7 +331,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
               label: "View All",
               url: "https://google.com",
             },
-            background: "https://placehold.it/1774x544",
+            background: "/media/carousel/carousel-benefits.jpeg",
           },
           {
             text: `
@@ -342,7 +342,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
               label: "Contact Us",
               url: "https://google.com",
             },
-            background: "https://placehold.it/1774x544",
+            background: "/media/carousel/carousel-benefits.jpeg",
           },
         ],
       },

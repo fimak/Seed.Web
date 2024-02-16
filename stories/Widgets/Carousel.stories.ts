@@ -1,16 +1,16 @@
-import Carousel from '@components/grid/controls/widgets/carousel/carousel';
-import type { Meta, StoryObj } from '@storybook/react';
-import { HomeContent } from 'content/home';
+import Carousel from "@components/grid/controls/widgets/carousel/carousel";
+import type { Meta, StoryObj } from "@storybook/react";
+import { HomeContent } from "content/home";
 
 const meta: Meta<typeof Carousel> = {
-  title: 'Widgets/Carousel',
+  title: "Widgets/Carousel",
   component: Carousel,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'fullscreen',
-  }
+    layout: "fullscreen",
+  },
 };
 
 export default meta;
@@ -38,10 +38,10 @@ export const Boats: Story = {
 ![desktop](/designs/carousel-boats.png)
 #### Mobile
 ![mobile](/designs/carousel-boats-mobile.png)
-        `
-      }
-    }
-  }
+        `,
+      },
+    },
+  },
 };
 
 export const Text: Story = {
@@ -54,8 +54,8 @@ export const Text: Story = {
 ![desktop](/designs/carousel-text.png)
 #### Mobile
 ![mobile](/designs/carousel-text-mobile.png)
-        `
-      }
-    }
-  }
+        `,
+      },
+    },
+  },
 };
