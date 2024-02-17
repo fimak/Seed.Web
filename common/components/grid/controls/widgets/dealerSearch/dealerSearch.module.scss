@@ -1,0 +1,91 @@
+.widgetDealerSearch {
+  position: relative;
+  height: 309px;
+  font-family: Montserrat, sans-serif;
+  color: #002E60;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+
+  .background {
+    width: 40%;
+    height: 309px;
+    position: absolute;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+      align-self: flex-end;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      h2 {
+        font-size: 28px;
+        line-height: 26px;
+        font-weight: 300;
+
+        strong {
+          font-weight: 600;
+        }
+      }
+
+      h3 {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 300;
+
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+
+      input {
+        min-width: 232px;
+        height: 85px;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        color: #002E60;
+        font-size: 12px;
+        line-height: 85px;
+        letter-spacing: 4px;
+        padding: 0 30px;
+        border-radius: 8px;
+        background-color: #EFF9FE;
+        border: none;
+        font-weight: 600;
+
+        &::placeholder {
+          color: #002E60;
+        }
+      }
+
+      button {
+        width: 85px;
+        height: 85px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #E9E3DC;
+
+        img {
+          transform: rotate(-45deg);
+        }
+      }
+
+    }
+  }
+}

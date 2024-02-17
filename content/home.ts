@@ -373,10 +373,10 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
       variant: "Standard",
       layout: "Standard",
       content: {
-        background: "https://placehold.it/1920x1280",
+        background: "/media/map.png",
         text: `
-                    <h2><strong>Start Your Journey</strong></h2>
-                    <h3>Find your <strong>dealer</strong>
+                    <h2><strong>Start Your <br />Journey</strong></h2>
+                    <h3>Find your <br /><strong>dealer</strong>
                 `,
         searchPlaceholder: "Enter Zipcode",
         searchTarget: "https://google.com",

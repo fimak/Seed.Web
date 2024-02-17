@@ -18,22 +18,24 @@ export const Home: React.FC = () => {
   return (
     <Layout>
       <Banner {...(HomeContent.banner!.imageLeftAligned as WidgetModel)} />
-      {/*<PinnedLinks {...(HomeContent.pinnedLinks!.bottom as WidgetModel)} />*/}
-      {/*<Text {...(HomeContent.text!.theFinest as WidgetModel)} />*/}
-      {/*<TextColumns*/}
-      {/*  {...(HomeContent.textColumns!.unmatchedQuality as WidgetModel)}*/}
-      {/*/>*/}
+      <PinnedLinks {...(HomeContent.pinnedLinks!.bottom as WidgetModel)} />
+      <Text {...(HomeContent.text!.theFinest as WidgetModel)} />
+      <TextColumns
+        {...(HomeContent.textColumns!.unmatchedQuality as WidgetModel)}
+      />
       {/*<Carousel {...(HomeContent.carousel!.boats as WidgetModel)} />*/}
-      {/*<Text {...(HomeContent.text!.aboveTheRest as WidgetModel)} />*/}
-      {/*<Slideshow {...(HomeContent.slideshow!.standard as WidgetModel)} />*/}
-      {/*<Hotspots {...(HomeContent.hotspots!.standard as WidgetModel)} />*/}
-      {/*<TextColumns*/}
-      {/*  {...(HomeContent.textColumns!.featuresAndCapabilities as WidgetModel)}*/}
-      {/*/>*/}
-      {/*<VideoScroll {...(HomeContent.videoScroll!.standard as WidgetModel)} />*/}
-      {/*<Feed {...(HomeContent.feed!.blog as WidgetModel)} />*/}
-      {/*<Text {...(HomeContent.text!.knowledge as WidgetModel)} />*/}
-      <DealerSearch {...(HomeContent.dealerSearch!.standard as WidgetModel)} />
+      <Text {...(HomeContent.text!.aboveTheRest as WidgetModel)} />
+      <Slideshow {...(HomeContent.slideshow!.standard as WidgetModel)} />
+      <Hotspots {...(HomeContent.hotspots!.standard as WidgetModel)} />
+      <TextColumns
+        {...(HomeContent.textColumns!.featuresAndCapabilities as WidgetModel)}
+      />
+      <VideoScroll {...(HomeContent.videoScroll!.standard as WidgetModel)} />
+      <Feed {...(HomeContent.feed!.blog as WidgetModel)} />
+      <Text {...(HomeContent.text!.knowledge as WidgetModel)} />
+      <DealerSearch
+        {...(HomeContent.dealerSearch!.startJourney as WidgetModel)}
+      />
       <Cta {...(HomeContent.cta!.flyIn as WidgetModel)} />
       <Carousel {...(HomeContent.carousel!.text as WidgetModel)} />
     </Layout>
