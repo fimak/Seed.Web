@@ -355,7 +355,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
       layout: "Standard",
       content: {
         title: "It's a regulator thing",
-        image: "https://placehold.it/1920x1280",
+        image: "/media/fishing-transparent.png",
         text: `
                     <h2>Be part of the<br/><strong>regulator community</strong></h2>
                 `,
