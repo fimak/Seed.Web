@@ -1,0 +1,85 @@
+.widgetHotspots {
+  padding: 0 10px;
+  font-family: Montserrat, sans-serif;
+
+  .thumbnail {
+    border-radius: 20px;
+    height: 431px;
+    position: relative;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 128px;
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      height: 257px;
+      width: 257px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      bottom: -128px;
+      left: calc(50% - 128px);
+      margin: 0 auto;
+
+      .secondaryImage {
+        margin-top: -20px;
+      }
+    }
+  }
+
+  .content {
+    padding: 16px 15px 30px;
+
+    .title {
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: #007481;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 28px;
+      letter-spacing: 4px;
+    }
+
+    .summary {
+      color: #002E60;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    .control {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+
+      span {
+        font-weight: 600;
+        font-size: 16px;
+        color: #002E60;
+        letter-spacing: 5px;
+        line-height: 28px;
+      }
+
+      button {
+        cursor: pointer;
+        height: 75px;
+        width: 75px;
+        border-radius: 8px;
+        background-color: #EFF9FE;
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .variant {
+    &Standart {}
+  }
+  .layout {
+    &LeftAligned {}
+  }
+}

@@ -421,8 +421,8 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
         background: "https://placehold.it/x278x857",
         hotspots: [
           {
-            thumbnail: "https://placehold.it/856x461",
-            secondaryImage: "https://placehold.it/138x232",
+            thumbnail: "/media/hotspot/hotspot-yamaha-xto.jpeg",
+            secondaryImage: "/media/hotspot/yamaha-quad-xto.png",
             name: "Power performance",
             summary:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -432,45 +432,45 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
           {
             thumbnail: "https://placehold.it/856x461",
             secondaryImage: "https://placehold.it/138x232",
-            name: "Power performance",
+            name: "Power performance1",
             summary:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Lorem ipsum1 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            hotspotX: 25.5,
+            hotspotY: 90,
+          },
+          {
+            thumbnail: "/media/hotspot/hotspot-yamaha-xto.jpeg",
+            secondaryImage: "/media/hotspot/yamaha-quad-xto.png",
+            name: "Power performance2",
+            summary:
+              "Lorem ipsum2 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             hotspotX: 25.5,
             hotspotY: 90,
           },
           {
             thumbnail: "https://placehold.it/856x461",
             secondaryImage: "https://placehold.it/138x232",
-            name: "Power performance",
+            name: "Power performance3",
             summary:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Lorem ipsum3 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            hotspotX: 25.5,
+            hotspotY: 90,
+          },
+          {
+            thumbnail: "/media/hotspot/hotspot-yamaha-xto.jpeg",
+            secondaryImage: "/media/hotspot/yamaha-quad-xto.png",
+            name: "Power performance4",
+            summary:
+              "Lorem ipsum4 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             hotspotX: 25.5,
             hotspotY: 90,
           },
           {
             thumbnail: "https://placehold.it/856x461",
             secondaryImage: "https://placehold.it/138x232",
-            name: "Power performance",
+            name: "Power performance5",
             summary:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            hotspotX: 25.5,
-            hotspotY: 90,
-          },
-          {
-            thumbnail: "https://placehold.it/856x461",
-            secondaryImage: "https://placehold.it/138x232",
-            name: "Power performance",
-            summary:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            hotspotX: 25.5,
-            hotspotY: 90,
-          },
-          {
-            thumbnail: "https://placehold.it/856x461",
-            secondaryImage: "https://placehold.it/138x232",
-            name: "Power performance",
-            summary:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Lorem ipsum5 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             hotspotX: 25.5,
             hotspotY: 90,
           },
