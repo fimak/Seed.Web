@@ -1,5 +1,68 @@
 .widgetFeed {
-    .moreLinkContainer {
-        text-align: center;
+  padding: 0 10px;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  .item {
+    margin: 33px 0;
+
+    .thumbnail {
+      width: 100%;
+      height: 100vw;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+      margin-bottom: 22px;
     }
+
+    .title {
+      text-transform: uppercase;
+      color: #002E60;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 5px;
+      padding: 9px 15px;
+      margin-bottom: 6px;
+    }
+
+    .summary {
+      color: #6E7981;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+      padding: 8px 15px;
+      letter-spacing: 1px;
+      margin-bottom: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      height: 75px;
+      width: 75px;
+      border-radius: 8px;
+      background-color: #EFF9FE;
+      border: none;
+      outline: none;
+      box-shadow: none;
+
+      img {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .variant {
+    &Blog {}
+  }
+
+  .layout {
+    &Row {}
+  }
 }

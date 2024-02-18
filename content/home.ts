@@ -391,19 +391,19 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
       content: {
         items: [
           {
-            thumbnail: "https://placehold.it/640x992",
+            thumbnail: "/media/feed/feed-1.jpeg",
             tag: "Center console boats 101",
             summary:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           },
           {
-            thumbnail: "https://placehold.it/640x992",
+            thumbnail: "/media/feed/feed-2.jpeg",
             tag: "Topic Tag",
             summary:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           },
           {
-            thumbnail: "https://placehold.it/640x992",
+            thumbnail: "/media/feed/feed-3.jpeg",
             tag: "Topic tag",
             summary:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
