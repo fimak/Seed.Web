@@ -753,14 +753,14 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
       layout: "ThickDivider",
       content: {
         upperText: `
-                    <h3>Perfor exploring</h3>
+                    <h3>Perfect for exploring</h3>
                     <h1><strong>Above the water</strong></h1>
                 `,
         lowerText: `
                     <h1>And <strong>below</strong></h1>
                 `,
-        backgroundVideo: "https://example.com/video.mp4",
-        videoThumbnail: "https://placehold.it/640x369",
+        backgroundVideo: "/media/video-scroll.jpeg",
+        videoThumbnail: "/media/video-scroll-thumbnail.jpeg",
         video: "https://example.com/example.mp4",
       },
     },

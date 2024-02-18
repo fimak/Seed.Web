@@ -1,10 +1,10 @@
 import { WidgetModel } from "@lib/umbraco/types/widgetModel.type";
-import { useMemo, useState } from "react";
+import { FC, useMemo, useState } from "react";
 import styles from "./hotspots.module.scss";
 import WidgetWrapper from "../widgetWrapper";
 import Image from "next/image";
 
-export default function Hotspots(model: WidgetModel) {
+const Hotspots: FC<WidgetModel> = (model) => {
   const [index, setIndex] = useState(0);
   const {
     content: { hotspots },
@@ -56,4 +56,6 @@ export default function Hotspots(model: WidgetModel) {
       </div>
     </WidgetWrapper>
   );
-}
+};
+
+export default Hotspots;

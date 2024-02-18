@@ -26,7 +26,7 @@ export const Home: React.FC = () => {
       {/*<Carousel {...(HomeContent.carousel!.boats as WidgetModel)} />*/}
       <Text {...(HomeContent.text!.aboveTheRest as WidgetModel)} />
       <Slideshow {...(HomeContent.slideshow!.standard as WidgetModel)} />
-      <Hotspots {...(HomeContent.hotspots!.standard as WidgetModel)} />
+      <Hotspots {...(HomeContent.hotspots!.leftAligned as WidgetModel)} />
       <TextColumns
         {...(HomeContent.textColumns!.featuresAndCapabilities as WidgetModel)}
       />

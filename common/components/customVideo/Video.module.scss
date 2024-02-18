@@ -1,0 +1,26 @@
+@import '@styles/variables.scss';
+
+.video {
+  width: 360px;
+  height: 215px;
+  border-radius: 10px;
+  align-self: center;
+  display: flex;
+
+  .play {
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(to bottom, rgba(238, 238, 238, 0.35) 0%, rgba(238, 238, 238, 0.35) 100%);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video {
+    border-radius: 10px;
+  }
+}

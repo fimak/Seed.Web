@@ -1,3 +1,4 @@
+import Video from "@components/customVideo/Video";
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
@@ -56,12 +57,6 @@ const Slideshow: React.FC<WidgetModel> = (model) => {
     }
   }, [items]);
 
-  const [showVideo, setShowVideo] = useState(false);
-
-  const handleThumbnailClick = () => {
-    setShowVideo((prevState) => !prevState);
-  };
-
   return (
     <WidgetWrapper model={model} styles={styles}>
       <progress max="100" value="0"></progress>
@@ -78,34 +73,7 @@ const Slideshow: React.FC<WidgetModel> = (model) => {
             </h2>
 
             {item.video && item.videoThumbnail && (
-              <div
-                className={styles.videoWrapper}
-                style={{ backgroundImage: `url(${item.videoThumbnail})` }}
-                onClick={handleThumbnailClick}
-              >
-                {!showVideo && (
-                  <div className={styles.play}>
-                    <Image
-                      src="/media/icons/play-arrow.svg"
-                      alt="play"
-                      width={11}
-                      height={14}
-                    />
-                  </div>
-                )}
-                {showVideo && (
-                  <video
-                    className={styles.video}
-                    width="360"
-                    height="215"
-                    controls
-                    autoPlay
-                    muted
-                  >
-                    <source src={item.video} type="video/mp4" />
-                  </video>
-                )}
-              </div>
+              <Video video={item.video} thumbnail={item.videoThumbnail} />
             )}
 
             <button className={styles.slideButton}>

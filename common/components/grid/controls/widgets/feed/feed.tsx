@@ -1,6 +1,7 @@
 import { WidgetModel } from "@lib/umbraco/types/widgetModel.type";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 import WidgetWrapper from "../widgetWrapper";
 import styles from "./feed.module.scss";
 
@@ -10,7 +11,7 @@ interface Feed {
   summary: string;
 }
 
-export default function Feed(model: WidgetModel) {
+const Feed: FC<WidgetModel> = (model) => {
   return (
     <WidgetWrapper model={model} styles={styles}>
       {model.content.items.map((item: Feed) => (
@@ -33,4 +34,6 @@ export default function Feed(model: WidgetModel) {
       ))}
     </WidgetWrapper>
   );
-}
+};
+
+export default Feed;
