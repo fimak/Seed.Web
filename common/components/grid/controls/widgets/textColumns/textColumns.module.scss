@@ -2,17 +2,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 25px;
 
   .text {
     font-family: Montserrat, sans-serif;
     text-align: center;
     color: #002E60;
 
+    h1 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      margin: 0;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 24px;
+      margin: 0;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
     h5 {
+      text-transform: uppercase;
       font-size: 20px;
       font-weight: 300;
       line-height: 24px;
-      text-transform: uppercase;
+      margin: 0;
 
       strong {
         font-size: 26px;
@@ -22,14 +47,26 @@
       }
     }
 
-    &:not(:last-child):after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 1px;
-      position: relative;
-      margin: 0 auto;
-      background-color: #C2D5ED;
+    p {
+      color: #6E7981;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 1px;
+    }
+
+    a {
+      cursor: pointer;
+      display: inline-block;
+      border: 2px solid #85D0CC;
+      border-radius: 10px;
+      padding: 22px 43px;
+      margin: 19px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 300;
+      color: #002E60;
     }
   }
 
@@ -41,8 +78,31 @@
 
   &.layout {
     &ThinDivider {
+      .text {
+        &:not(:last-child):after {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 1px;
+          position: relative;
+          margin: 24px auto;
+          background-color: #C2D5ED;
+        }
+      }
+    }
+
+    &ThickDivider {
+      .text {
+        &:not(:last-child):after {
+          content: '';
+          display: block;
+          width: 182px;
+          height: 2px;
+          position: relative;
+          margin: 24px auto;
+          background-color: #002E60;
+        }
+      }
     }
   }
-
-
 }
