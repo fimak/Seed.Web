@@ -9,7 +9,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
       content: {
         text: `
                     <h1>The Ride of your life</h1>
-                    <h2>starts with regulartor</h2>
+                    <h2>starts with regulator</h2>
                 `,
         image: "/media/banner.jpg",
       },
@@ -21,7 +21,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
       content: {
         text: `
                     <h1>The Ride of your life</h1>
-                    <h2>starts with regulartor</h2>
+                    <h2>starts with regulator</h2>
                 `,
         image: "https://placehold.it/1774x974",
       },
@@ -33,9 +33,9 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
       content: {
         text: `
                     <h1>The Ride of your life</h1>
-                    <h2>starts with regulartor</h2>
+                    <h2>starts with regulator</h2>
                 `,
-        video: "https://example.com/some-video.mp4",
+        video: "https://youtu.be/hu3eQ-1f5rY?si=NfnX5ihpCNqQDM00",
       },
     },
     videoRightAligned: {

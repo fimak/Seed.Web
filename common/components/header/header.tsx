@@ -1,5 +1,4 @@
 import BurgerMenu from "@components/header/burgerMenu";
-import { FlexibleLinkModel } from "@lib/umbraco/types/flexibleLinkModel.type";
 import { FC, useEffect, useState } from "react";
 import styles from "./header.module.scss";
 import Image from "next/image";
