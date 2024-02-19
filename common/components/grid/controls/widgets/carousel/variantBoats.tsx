@@ -1,6 +1,7 @@
 import styles from "@widgets/carousel/carousel.module.scss";
+import clsx from "clsx";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 
 interface BoatStat {
   name: string;
@@ -20,6 +21,8 @@ interface Props {
 }
 
 const VariantBoats: FC<Props> = ({ items, builderLink }) => {
+  const ref = useRef(null);
+
   const mid = Math.floor(items.length / 2);
 
   const getDiff = (a: number, b: number) => {
@@ -58,20 +61,27 @@ const VariantBoats: FC<Props> = ({ items, builderLink }) => {
       </div>
       <div className={styles.wrapper}>
         <div className={styles.ribbon}>
-          {items.map((item) => (
-            <div className={styles.item} key={`item-${item.modelNumber}`}>
+          {items.map((item, index) => (
+            <div
+              className={clsx(styles.item, {
+                [styles.active]: getDiff(mid, index + 1) === 0,
+              })}
+              key={`item-${item.modelNumber}`}
+              ref={ref}
+            >
+              <div className={styles.model}>{item.modelNumber}</div>
               <div
                 className={styles.thumbnail}
                 style={{ backgroundImage: `url(${item.thumbnail})` }}
               >
                 <div className={styles.links}>
                   <Link className={styles.link} href={item.detailsLink}>
-                    View details
+                    View <strong>details</strong>
                   </Link>
-                  <Link
-                    className={styles.link}
-                    href={builderLink}
-                  >{`Build your ${item.modelNumber}`}</Link>
+                  <Link className={styles.link} href={builderLink}>
+                    <strong>Build</strong>
+                    {` your ${item.modelNumber}`}
+                  </Link>
                 </div>
               </div>
               <div className={styles.stats}>
