@@ -1,13 +1,13 @@
 @import '@styles/variables.scss';
 @import 'foundation-sites/scss/foundation.scss';
 .widgetPinnedLinks {
-  //position: fixed;
-  width: calc(100% - 20px);
-  margin: 0 10px 55px;
-  height: 75px;
-  border-radius: 6px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  position: fixed;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  //max-width: 927px;
+  //border-top-left-radius: 6px;
+  //border-top-right-radius: 6px;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -15,7 +15,6 @@
 
   &.variant {
     &Standard {
-      background-color: #002E60;
     }
   }
 
@@ -27,10 +26,19 @@
   }
 
   nav {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #002E60;
+    height: 75px;
+    width: 100%;
+    max-width: 927px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 
     a {
-      width: 100px;
+      width: 100%;
+      min-width: 100px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -45,7 +53,7 @@
 
       img {}
 
-      span {
+      .text {
         display: flex;
         flex-direction: column;
         align-items: center;

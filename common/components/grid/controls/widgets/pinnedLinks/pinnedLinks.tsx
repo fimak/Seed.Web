@@ -1,3 +1,4 @@
+import Rte from "@components/grid/controls/rte";
 import { WidgetModel } from "@lib/umbraco/types/widgetModel.type";
 import Link from "next/link";
 import styles from "./pinnedLinks.module.scss";
@@ -16,7 +17,7 @@ export default function PinnedLinks(model: WidgetModel) {
               width={18}
               height={18}
             />
-            <span dangerouslySetInnerHTML={{ __html: link.label }} />
+            <Rte text={link.label} className={styles.text} />
           </Link>
         ))}
       </nav>
