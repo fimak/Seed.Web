@@ -1,31 +1,12 @@
 .widgetCarousel {
-  position: relative;
-  margin: 0 10px 28px;
-  padding: 15px;
-  border-radius: 20px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #FFFFFF;
+  padding: 0 10px;
+  margin: 0 0 28px;
   font-family: Montserrat, sans-serif;
-  text-align: center;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: #002E60;
-    opacity: 0.75;
-    z-index: 0;
-  }
 
   .variant {
-    &Text {
-    }
+    &Text {}
+
+    &Boats {}
   }
 
   .layout {
@@ -33,62 +14,172 @@
     }
   }
 
-  .text {
-    position: relative;
-    z-index: 1;
-    margin: 67px 0 54px;
+  .slider {
+    margin-top: 89px;
+    margin-bottom: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    h3 {
-      font-size: 24px;
-      font-weight: 300;
-      line-height: 24px;
-      text-transform: uppercase;
+    .control {
+      padding: 34px 32px;
+      font-weight: 600;
+      color: #002E60;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      .label {}
     }
+    .wrapper {
+      width: 100%;
+      overflow-x: scroll;
 
-    p {
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 26px;
+      .ribbon {
+        width: auto;
+        display: flex;
+        gap: 20px;
+
+        .item {
+          width: 205px;
+          height: 237px;
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+
+          .thumbnail {
+            border-radius: 4px;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 205px;
+            height: 208px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            .links {
+              display: none;
+            }
+          }
+
+          .stats {
+            width: 100%;
+            height: 22px;
+            overflow-x: scroll;
+            background-color: #002E60;
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 300;
+
+            &Ribbon {
+              width: auto;
+              padding: 6px 22px;
+              display: flex;
+              gap: 10px;
+            }
+          }
+
+          &.active {
+            .thumbnail {
+              .links {
+                width: 100%;
+                height: 22px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                gap: 25px;
+                margin-bottom: 25px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
-  .btnGroup {
+  .background {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-    margin-bottom: 33px;
+    padding: 15px;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
 
-    a {
-      display: flex;
-      padding: 17px 42px;
-      border-radius: 7px;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-size: 12px;
-      line-height: 12px;
-      font-weight: 600;
-      color: #FFFFFF;
-      background: linear-gradient(141.66deg, rgba(238, 238, 238, 0.35) 0%, rgba(219, 219, 219, 0.63) 100%);
-      backdrop-filter: blur(5px);
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      background-color: #002E60;
+      opacity: 0.75;
+      z-index: 0;
     }
 
-    button {
-      display: flex;
-      justify-content: center;
-      justify-items: center;
-      align-items: center;
-      width: 45px;
-      height: 45px;
-      background-color: #EFF9FE;
-      border-radius: 5px;
-      outline: none;
-      box-shadow: none;
-      border: none;
-      cursor: pointer;
+    .text {
+      position: relative;
+      z-index: 1;
+      margin: 67px 0 54px;
 
-      &:first-child {
-        transform: rotate(180deg);
+      h3 {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 24px;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .btnGroup {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+      margin-bottom: 33px;
+
+      a {
+        display: flex;
+        padding: 17px 42px;
+        border-radius: 7px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 600;
+        color: #FFFFFF;
+        background: linear-gradient(141.66deg, rgba(238, 238, 238, 0.35) 0%, rgba(219, 219, 219, 0.63) 100%);
+        backdrop-filter: blur(5px);
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background-color: #EFF9FE;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+
+        &:first-child {
+          transform: rotate(180deg);
+        }
       }
     }
   }

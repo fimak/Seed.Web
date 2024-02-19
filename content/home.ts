@@ -60,7 +60,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
         builderLink: "https://google.com",
         items: [
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-30.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "24xo",
             stats: [
@@ -87,7 +87,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             ],
           },
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-34.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "26xo",
             stats: [
@@ -114,7 +114,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             ],
           },
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-37.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "30xo",
             stats: [
@@ -141,7 +141,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             ],
           },
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-41.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "41",
             stats: [
@@ -168,7 +168,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             ],
           },
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-30.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "37",
             stats: [
@@ -195,7 +195,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             ],
           },
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-34.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "34",
             stats: [
@@ -222,7 +222,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             ],
           },
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-37.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "31",
             stats: [
@@ -249,7 +249,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             ],
           },
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-41.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "28",
             stats: [
@@ -276,7 +276,7 @@ export const HomeContent: NodeJS.Dict<NodeJS.Dict<WidgetModel>> = {
             ],
           },
           {
-            thumbnail: "https://placehold.it/640x740",
+            thumbnail: "/media/carousel/carousel-37.jpeg",
             detailsLink: "https://google.com",
             modelNumber: "23",
             stats: [

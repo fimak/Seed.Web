@@ -23,7 +23,7 @@ export const Home: React.FC = () => {
       <TextColumns
         {...(HomeContent.textColumns!.unmatchedQuality as WidgetModel)}
       />
-      {/*<Carousel {...(HomeContent.carousel!.boats as WidgetModel)} />*/}
+      <Carousel {...(HomeContent.carousel!.boats as WidgetModel)} />
       <Text {...(HomeContent.text!.aboveTheRest as WidgetModel)} />
       <Slideshow {...(HomeContent.slideshow!.standard as WidgetModel)} />
       <Hotspots {...(HomeContent.hotspots!.leftAligned as WidgetModel)} />
